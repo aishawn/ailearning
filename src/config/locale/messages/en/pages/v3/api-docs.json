@@ -1,0 +1,40 @@
+{
+  "page": {
+    "title": "API Documentation v3",
+    "description": "Complete API documentation for version 3 endpoints and services.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "API Documentation v3",
+        "description": "Latest API version with enhanced features, improved performance, and better developer experience.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "url": "/api/v3",
+            "target": "_self",
+            "variant": "default"
+          }
+        ]
+      },
+      "content": {
+        "id": "content",
+        "title": "What's New in v3",
+        "description": "Discover the new features and improvements in our latest API version.",
+        "items": [
+          {
+            "title": "Enhanced Performance",
+            "description": "Faster response times and improved reliability across all endpoints."
+          },
+          {
+            "title": "New Endpoints",
+            "description": "Additional functionality with new AI-powered endpoints."
+          },
+          {
+            "title": "Better Error Messages",
+            "description": "More detailed error responses to help with debugging."
+          }
+        ]
+      }
+    }
+  }
+}

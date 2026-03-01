@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Sign In - AIShawn",
+    "description": "Sign in to your AIShawn account"
+  },
+  "page": {
+    "title": "Sign In",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Sign In",
+        "description": "Sign in to your account to access all features.",
+        "buttons": [
+          {
+            "title": "Sign In",
+            "icon": "LogIn",
+            "url": "/sign-in",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Style Guide - AIShawn",
+    "description": "AIShawn style guide and design system"
+  },
+  "page": {
+    "title": "Style Guide",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Style Guide",
+        "description": "Comprehensive style guide and design system for AIShawn platform.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

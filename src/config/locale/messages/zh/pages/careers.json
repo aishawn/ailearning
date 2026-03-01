@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "职业机会",
+    "description": "加入 AIShawn 团队，帮助塑造 AI 驱动广告的未来"
+  },
+  "page": {
+    "title": "职业机会",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "加入我们的团队",
+        "description": "我们正在构建 AI 驱动广告的未来。加入我们，帮助塑造下一代营销工具。",
+        "buttons": [
+          {
+            "title": "查看职位",
+            "icon": "Briefcase",
+            "url": "#",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

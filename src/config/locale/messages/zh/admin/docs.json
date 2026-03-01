@@ -1,0 +1,44 @@
+{
+  "fields": {
+    "slug": "路由",
+    "slug_tip": "路径风格的路由，例如 vla/algorithm。会覆盖文件系统中相同路径的文档。",
+    "title": "标题",
+    "description": "描述",
+    "content": "内容",
+    "created_at": "创建时间"
+  },
+  "list": {
+    "title": "文档",
+    "crumbs": {
+      "admin": "管理后台",
+      "docs": "文档"
+    },
+    "buttons": {
+      "add": "添加文档",
+      "edit": "编辑文档",
+      "view": "查看文档"
+    }
+  },
+  "add": {
+    "title": "添加文档",
+    "crumbs": {
+      "admin": "管理后台",
+      "docs": "文档",
+      "add": "添加文档"
+    },
+    "buttons": {
+      "submit": "添加文档"
+    }
+  },
+  "edit": {
+    "title": "编辑文档",
+    "crumbs": {
+      "admin": "管理后台",
+      "docs": "文档",
+      "edit": "编辑文档"
+    },
+    "buttons": {
+      "submit": "保存修改"
+    }
+  }
+}

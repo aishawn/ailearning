@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "服务器信息",
+    "description": "服务器状态和系统信息。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "服务器信息",
+        "description": "查看服务器状态、系统指标和性能信息。"
+      },
+      "info": {
+        "id": "info",
+        "title": "系统信息",
+        "description": "当前服务器状态和系统指标。",
+        "items": [
+          {
+            "title": "服务器健康",
+            "description": "当前服务器健康和正常运行时间状态。"
+          },
+          {
+            "title": "性能指标",
+            "description": "CPU、内存和系统性能指标。"
+          },
+          {
+            "title": "系统详情",
+            "description": "服务器配置和系统信息。"
+          }
+        ]
+      }
+    }
+  }
+}

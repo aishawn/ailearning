@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Pipiads 替代方案 - AIShawn",
+    "description": "AIShawn 是 Pipiads 的最佳替代方案，用于广告间谍和创意灵感"
+  },
+  "page": {
+    "title": "Pipiads 替代方案",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "比 Pipiads 更好",
+        "description": "使用 AI 驱动的工具发现成功的广告创意并获得灵感。AIShawn 提供比 Pipiads 更多的广告数据、更好的搜索功能和更智能的洞察。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "page": {
+    "title": "API文档 v3",
+    "description": "版本3端点和服务的完整API文档。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "API文档 v3",
+        "description": "最新的API版本，具有增强功能、改进的性能和更好的开发者体验。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "url": "/api/v3",
+            "target": "_self",
+            "variant": "default"
+          }
+        ]
+      },
+      "content": {
+        "id": "content",
+        "title": "v3新功能",
+        "description": "发现我们最新API版本中的新功能和改进。",
+        "items": [
+          {
+            "title": "增强性能",
+            "description": "所有端点的响应时间更快，可靠性更高。"
+          },
+          {
+            "title": "新端点",
+            "description": "具有AI驱动端点的附加功能。"
+          },
+          {
+            "title": "更好的错误消息",
+            "description": "更详细的错误响应以帮助调试。"
+          }
+        ]
+      }
+    }
+  }
+}

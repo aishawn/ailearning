@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Social Media - AIShawn",
+    "description": "Create engaging social media content and ads with AIShawn"
+  },
+  "page": {
+    "title": "Social Media",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Social Media Content & Ads",
+        "description": "Create eye-catching social media posts and ads that drive engagement and conversions with AIShawn's AI-powered creative tools.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

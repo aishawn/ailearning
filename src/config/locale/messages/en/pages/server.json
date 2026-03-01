@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Server Information",
+    "description": "Server status and system information.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Server Information",
+        "description": "View server status, system metrics, and performance information."
+      },
+      "info": {
+        "id": "info",
+        "title": "System Information",
+        "description": "Current server status and system metrics.",
+        "items": [
+          {
+            "title": "Server Health",
+            "description": "Current server health and uptime status."
+          },
+          {
+            "title": "Performance Metrics",
+            "description": "CPU, memory, and system performance indicators."
+          },
+          {
+            "title": "System Details",
+            "description": "Server configuration and system information."
+          }
+        ]
+      }
+    }
+  }
+}

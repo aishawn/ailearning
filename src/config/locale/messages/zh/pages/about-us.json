@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "关于我们",
+    "description": "了解更多关于 AIShawn 和我们革命性广告的使命"
+  },
+  "page": {
+    "title": "关于我们",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "关于 AIShawn",
+        "description": "AIShawn 是一个 AI 驱动的、面向效果营销人员的全平台。我们帮助企业在一个地方创建、启动和优化所有渠道的广告活动。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

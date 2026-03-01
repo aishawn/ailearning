@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "title": "Affiliate Program - Share AIShawn, Earn Cash",
+    "description": "Join our affiliate program and earn 25% recurring commission by promoting AIShawn. Know someone making ads? Share AIShawn and earn cash."
+  },
+  "page": {
+    "title": "Affiliate Program",
+    "show_sections": ["hero", "stats", "usage", "faq", "cta"],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Share AIShawn, earn cash. It's that simple.",
+        "highlight_text": "earn cash",
+        "description": "Know someone making ads? Share AIShawn and earn 25% recurring commission.",
+        "buttons": [
+          {
+            "title": "Generate my referral link",
+            "icon": "Link",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false,
+        "show_testimonials": false
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Your Payout",
+        "description": "If somebody joins AIShawn from your link, we'll automatically pay you 25% every month.",
+        "items": [
+          {
+            "title": "25%",
+            "description": "Recurring commission"
+          },
+          {
+            "title": "$0",
+            "description": "Minimum payout threshold"
+          },
+          {
+            "title": "Monthly",
+            "description": "Payment frequency"
+          }
+        ]
+      },
+      "usage": {
+        "block": "features-step",
+        "id": "usage",
+        "title": "How does it work?",
+        "description": "Here's how to join and start earning with AIShawn",
+        "items": [
+          {
+            "title": "Get your link",
+            "description": "Sign up for our affiliate program and get your unique sharing link.",
+            "image": {
+              "src": "https://picsum.photos/seed/affiliate-step1/400/300",
+              "alt": "Get your link"
+            }
+          },
+          {
+            "title": "Share with your network",
+            "description": "Post on LinkedIn, mention in Slack groups, or send to marketers who need better ad tools.",
+            "image": {
+              "src": "https://picsum.photos/seed/affiliate-step2/400/300",
+              "alt": "Share with your network"
+            }
+          },
+          {
+            "title": "Earn cash every month",
+            "description": "Earn 25% for everyone who signs up for a paid AIShawn plan from your link.",
+            "image": {
+              "src": "https://picsum.photos/seed/affiliate-step3/400/300",
+              "alt": "Earn cash every month"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "FAQ",
+        "description": "Find answers to common questions about our affiliate program",
+        "items": [
+          {
+            "question": "What exactly does AIShawn do?",
+            "answer": "AIShawn is the most powerful AI-powered ad creation and management platform. With AIShawn, you can research competitors, create campaigns, analyze performance, and iterate on what works - all in one place. Plus, you get insights about your creative performance that you simply can't find anywhere else, helping you understand not just what works, but why it works."
+          },
+          {
+            "question": "How does the referral program work?",
+            "answer": "Once signed up for the affiliate program, you will be able to get your referral link via your portal. Send your link to anyone you want to refer and get paid a commission on their subscription."
+          },
+          {
+            "question": "How do I track my referrals and earnings?",
+            "answer": "You get a real-time dashboard showing clicks, signups, and commissions. No guessing, no waiting for monthly reports - you can see exactly who signed up and how much you've earned anytime."
+          },
+          {
+            "question": "Who should I share this with?",
+            "answer": "Anyone running ads: performance marketers, creative strategists, media buyers, agency teams. If they're spending time on ad research, creation, analysis, or reporting, they need AIShawn."
+          },
+          {
+            "question": "How much can I earn?",
+            "answer": "25% of whatever they pay, every month they stay subscribed. If someone signs up for our $109/month plan, you earn $27.25 monthly. Scale that across multiple referrals and you're looking at serious recurring income."
+          },
+          {
+            "question": "Why do people switch to AIShawn?",
+            "answer": "Most people waste time switching between 5+ tools to research competitors, create ads, launch campaigns, and analyze performance. AIShawn handles the entire workflow in one platform that actually makes sense together. Plus, you get insights you simply can't find anywhere else - like seeing exactly why your best ads work, tracking competitor volume and strategy changes in real-time, and getting AI recommendations that turn almost-winners into champions."
+          },
+          {
+            "question": "How do I get paid?",
+            "answer": "Monthly payouts via PayPal or direct deposit. No minimum threshold, no waiting 90 days for your first payment."
+          },
+          {
+            "question": "Any other questions?",
+            "answer": "Reach out to us via support@aishawn.life or via the chat once logging in."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Start winning with AIShawn",
+        "description": "Join our affiliate program today and start earning recurring commissions.",
+        "buttons": [
+          {
+            "title": "Generate my referral link",
+            "icon": "Link",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    }
+  }
+}

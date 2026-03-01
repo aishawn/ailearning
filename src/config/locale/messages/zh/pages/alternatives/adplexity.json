@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Adplexity 替代方案 - AIShawn",
+    "description": "AIShawn 是 Adplexity 的最佳替代方案，用于广告情报和竞争对手分析"
+  },
+  "page": {
+    "title": "Adplexity 替代方案",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "比 Adplexity 更好",
+        "description": "通过 AI 驱动的洞察发现更多优质广告。AIShawn 覆盖更广、分析更智能，并提供自动化工作流。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

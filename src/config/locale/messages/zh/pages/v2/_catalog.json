@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "API目录 v2",
+    "description": "浏览版本2中可用的API端点和服务。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "API目录 v2",
+        "description": "探索我们v2 API中所有可用的API端点、服务和资源。"
+      },
+      "catalog": {
+        "id": "catalog",
+        "title": "可用服务",
+        "description": "浏览我们的综合API目录。",
+        "items": [
+          {
+            "title": "身份验证API",
+            "description": "用户身份验证和授权端点。"
+          },
+          {
+            "title": "数据API",
+            "description": "数据管理和检索服务。"
+          },
+          {
+            "title": "AI服务",
+            "description": "人工智能和机器学习端点。"
+          }
+        ]
+      }
+    }
+  }
+}

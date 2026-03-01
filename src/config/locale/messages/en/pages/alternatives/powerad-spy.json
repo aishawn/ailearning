@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Powerad Spy Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Powerad Spy for ad intelligence and spy tools"
+  },
+  "page": {
+    "title": "Powerad Spy Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Powerad Spy",
+        "description": "Access comprehensive ad intelligence and spy tools with AI-powered features. AIShawn offers more platforms, better data accuracy, and smarter automation than Powerad Spy.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

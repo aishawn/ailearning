@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Facebook Ads Manager Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Facebook Ads Manager for creating and managing Facebook ads"
+  },
+  "page": {
+    "title": "Facebook Ads Manager Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Facebook Ads Manager",
+        "description": "Create and optimize Facebook ads with AI-powered creative tools. AIShawn offers smarter automation, better analytics, and cross-platform support.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

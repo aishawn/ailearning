@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Bigspy 替代方案 - AIShawn",
+    "description": "AIShawn 是 Bigspy 的最佳替代方案，用于广告情报和竞争对手分析"
+  },
+  "page": {
+    "title": "Bigspy 替代方案",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "比 Bigspy 更好",
+        "description": "使用 AI 驱动的工具获得全面的广告情报和竞争对手洞察。AIShawn 提供比 Bigspy 更多的数据源、更好的分析和更智能的自动化。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

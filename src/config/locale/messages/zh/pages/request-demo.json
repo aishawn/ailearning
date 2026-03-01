@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "申请演示",
+    "description": "申请 AIShawn 演示，了解它如何改变您的广告活动"
+  },
+  "page": {
+    "title": "申请演示",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "申请演示",
+        "description": "观看 AIShawn 的实际应用。安排个性化演示，了解我们的 AI 驱动平台如何改变您的广告活动。",
+        "buttons": [
+          {
+            "title": "安排演示",
+            "icon": "Calendar",
+            "url": "#",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

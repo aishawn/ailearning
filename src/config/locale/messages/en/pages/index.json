@@ -1,0 +1,283 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "stats",
+      "introduce",
+      "features",
+      "showcases",
+      "testimonials"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "The AI Ads Agent to get 10X ROI",
+        "highlight_text": "10X ROI",
+        "description": "AIShawn: the AI-powered, all-in-one hub for performance marketers—create, launch, and optimize campaigns across every channel from one place.",
+        "announcement": null,
+        "tip": null,
+        "buttons": [
+          {
+            "title": "Request Demo",
+            "icon": "Calendar",
+            "url": "/request-demo",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "avatars_tip": null,
+        "show_award": false,
+        "show_testimonials": true,
+        "youtube_url": "https://www.youtube.com/watch?v=PhX1Fz1VHRw",
+        "image": {
+          "src": "/imgs/features/admin.png",
+          "alt": "AIShawn Life Platform",
+          "width": 1200,
+          "height": 800
+        },
+        "image_invert": {
+          "src": "/imgs/features/admin-dark.png",
+          "alt": "AIShawn Life Platform",
+          "width": 1200,
+          "height": 800
+        },
+        "background_image": null
+      },
+
+      "benefits": {
+        "block": "features-accordion",
+        "id": "benefits",
+        "title": "Everything you need to run high-performing ad campaigns",
+        "label": "Capabilities",
+        "description": "We transform data quality into a differentiator that drives your growth.",
+        "items": [
+          {
+            "title": "Strategic Planning",
+            "description": "Unlock smarter advertising with AI-driven insights. Plan campaigns with precision, optimize budgets, and target the right audience from the start.",
+            "icon": "Target",
+            "image": {
+              "src": "/imgs/features/user-billing.png",
+              "alt": "Strategic Planning"
+            }
+          },
+          {
+            "title": "Audience Intelligence",
+            "description": "Build a complete 360° customer profile. Leverage AI to analyze behaviors, interests, and demographics for hyper-personalized targeting.",
+            "icon": "Users",
+            "image": {
+              "src": "/imgs/features/admin-settings.png",
+              "alt": "Audience Intelligence"
+            }
+          },
+          {
+            "title": "AI-Powered Content Generation",
+            "description": "Generate compelling ad content in seconds. Our AI crafts tailored messaging, visuals, and copy to engage your audience and drive conversions.",
+            "icon": "Sparkles",
+            "image": {
+              "src": "/imgs/features/landing-page.png",
+              "alt": "AI Content Generation"
+            }
+          },
+          {
+            "title": "Smart Ad Placement and Reporting",
+            "description": "Track, analyze, and optimize your ads in real-time. Get in-depth insights into performance and maximize ROI—all from one platform.",
+            "icon": "BarChart3",
+            "image": {
+              "src": "/imgs/features/landing-page.png",
+              "alt": "Reporting"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "block": "features-step",
+        "id": "usage",
+        "title": "How to Launch with AIShawn",
+        "description": "Get your AI SaaS startup running in three simple steps:",
+        "image": {
+          "src": "/imgs/features/1.png",
+          "alt": "usage"
+        },
+        "image_position": "left",
+        "text_align": "center",
+        "items": [
+          {
+            "title": "Get AIShawn",
+            "description": "Buy AIShawn with a one-time payment. Check your email for the code and documentation.",
+            "image": {
+              "src": "/imgs/features/5.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "Start Your Project",
+            "description": "Read the documentation and clone the code of AIShawn. Start building your AI SaaS startup.",
+            "image": {
+              "src": "/imgs/features/6.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "Customize Your Project",
+            "description": "Modify the template with your data and contents. Specific AI functionality needs.",
+            "image": {
+              "src": "/imgs/features/7.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "Deploy to Production",
+            "description": "Deploy your project to production with a few steps and start serving customers immediately.",
+            "image": {
+              "src": "/imgs/features/8.png",
+              "alt": "usage"
+            }
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "showcases": {
+        "id": "showcases",
+        "title": "Case Studies",
+        "description": "AIShawn Life is proven to boost ad performance, maximize ROI, and streamline campaigns with AI-driven automation, real-time insights, and predictive analytics.",
+        "groups": [],
+        "items": [
+          {
+            "title": "TAL Education Group",
+            "description": "Selling children's learning pads. Empowering young learners with interactive technology.<br/><strong>300%+ Higher conversion rates</strong><br/>3x Blended ROAS<br/>650% Revenue",
+            "image": {
+              "src": "/imgs/cases/1.png",
+              "alt": "TAL Education Group"
+            }
+          },
+          {
+            "title": "Collov.ai",
+            "description": "One-Click AI Virtual Staging.<br/>Series A+ startup<br/><strong>Blended ROAS: 58%</strong><br/>CVR: 58%",
+            "image": {
+              "src": "/imgs/cases/2.png",
+              "alt": "Collov.ai"
+            }
+          },
+          {
+            "title": "Halliday",
+            "description": "The world's first Proactive AI Glasses with an Invisible Display<br/><strong>13x Blended ROAS</strong><br/>$3.3M Revenue",
+            "image": {
+              "src": "/imgs/cases/3.png",
+              "alt": "Halliday"
+            }
+          },
+          {
+            "title": "Clarity AI",
+            "description": "An AI-powered inbox that handles all the boring & repetitive email tasks for you<br/><strong>84% CAC reduction</strong>",
+            "image": {
+              "src": "/imgs/cases/4.png",
+              "alt": "Clarity AI"
+            }
+          },
+          {
+            "title": "iHealth",
+            "description": "Reliable home testing solutions for flu and COVID-19.<br/><strong>100M+ Revenue</strong>",
+            "image": {
+              "src": "/imgs/cases/5.png",
+              "alt": "iHealth"
+            }
+          },
+          {
+            "title": "Articuler AI",
+            "description": "Automating content workflows to scale engagement.<br/><strong>79% CAC reduction</strong><br/>600% Expansion",
+            "image": {
+              "src": "/imgs/cases/6.png",
+              "alt": "Articuler AI"
+            }
+          },
+          {
+            "title": "PamHQ",
+            "description": "Designed specifically for automotive dealerships functioning as an AI receptionist<br/><strong>21% CAC reduction</strong>",
+            "image": {
+              "src": "/imgs/cases/7.png",
+              "alt": "PamHQ"
+            }
+          },
+          {
+            "title": "BitSport",
+            "description": "Play, compete, and earn crypto rewards in popular games.<br/><strong>37% CAC reduction</strong>",
+            "image": {
+              "src": "/imgs/cases/8.png",
+              "alt": "BitSport"
+            }
+          },
+          {
+            "title": "Pika Art",
+            "description": "Creating AI-powered videos. Bringing ideas to life with stunning visuals and animation.<br/>Series B Funding Stage<br/><strong>109M Total Funding</strong>",
+            "image": {
+              "src": "/imgs/cases/9.png",
+              "alt": "Pika Art"
+            }
+          }
+        ]
+      },
+
+      "faq": {
+        "id": "faq",
+        "title": "Frequently Asked Questions About AIShawn",
+        "description": "Have another question? Contact us on Discord or by email.",
+        "items": [
+          {
+            "question": "What exactly is AIShawn and how does it work?",
+            "answer": "AIShawn is a comprehensive NextJS boilerplate designed specifically for building AI SaaS startups. It provides ready-to-use templates, infrastructure setup, and deployment tools that help you launch your AI business in hours instead of days."
+          },
+          {
+            "question": "Do I need advanced technical skills to use AIShawn?",
+            "answer": "While basic programming knowledge is helpful, AIShawn is designed to be developer-friendly. Our templates and documentation make it easy to get started, even if you're not an expert in AI or cloud infrastructure."
+          },
+          {
+            "question": "What types of AI SaaS can I build with AIShawn?",
+            "answer": "AIShawn supports a wide range of AI applications, from content generation to data analysis tools. Our templates cover popular use cases like AI chatbots, content generators, image processing apps, and more."
+          },
+          {
+            "question": "How long does it typically take to launch with AIShawn?",
+            "answer": "With AIShawn, you can have a working prototype in hours and a production-ready application in hours. Our one-click deployment and pre-configured infrastructure significantly reduce the traditional months-long development cycle."
+          },
+          {
+            "question": "What's included in the AIShawn infrastructure?",
+            "answer": "AIShawn provides a complete infrastructure stack including authentication, database setup, API integration, payment processing, and scalable cloud deployment. Everything is pre-configured following industry best practices."
+          },
+          {
+            "question": "Can I customize the templates to match my brand?",
+            "answer": "Absolutely! All AIShawn templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Get Started Now",
+        "description": "Don't wait another minute! Ready to unlock the magic of AI and marketing?",
+        "buttons": [
+          {
+            "title": "Request Demo",
+            "url": "/request-demo",
+            "target": "_self",
+            "icon": "Calendar"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "subscribe": {
+        "id": "subscribe",
+        "title": "Subscribe to our newsletter",
+        "description": "Get the latest news and updates from AIShawn.",
+        "submit": {
+          "input": {
+            "placeholder": "Enter your email"
+          },
+          "button": {
+            "title": "Subscribe"
+          },
+          "action": "/api/subscribe"
+        },
+        "className": "bg-muted"
+      }
+    }
+  }
+}

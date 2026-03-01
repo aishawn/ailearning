@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "About",
+    "description": "Learn more about our platform and mission.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "About Our Platform",
+        "description": "Discover our mission to revolutionize advertising with AI-powered solutions."
+      },
+      "content": {
+        "id": "content",
+        "title": "Our Story",
+        "description": "Learn about our journey and the technology behind our platform.",
+        "items": [
+          {
+            "title": "Our Mission",
+            "description": "Empowering businesses with AI-driven advertising solutions."
+          },
+          {
+            "title": "Our Technology",
+            "description": "Cutting-edge AI technology for modern advertising needs."
+          },
+          {
+            "title": "Our Team",
+            "description": "Experienced professionals dedicated to innovation."
+          }
+        ]
+      }
+    }
+  }
+}

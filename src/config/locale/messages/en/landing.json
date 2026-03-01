@@ -1,0 +1,296 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "/",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Why AIShawn?",
+          "children": [
+            {
+              "title": "enterprise",
+              "url": "https://aishawn.life/enterprise"
+            },
+            {
+              "title": "smbs",
+              "url": "https://aishawn.life/smbs"
+            },
+            {
+              "title": "industry",
+              "url": "https://aishawn.life/industry"
+            }
+          ]
+        },
+        {
+          "title": "Pricing",
+          "url": "/pricing"
+        },
+        {
+          "title": "Affiliate",
+          "url": "/affiliate"
+        },
+        {
+          "title": "Showcases",
+          "url": "/showcases"
+        },
+        {
+          "title": "Resources",
+          "children": [
+            {
+              "title": "Docs",
+              "url": "/docs"
+            },
+            {
+              "title": "Blog",
+              "url": "/blog"
+            },
+            {
+              "title": "Careers",
+              "url": "/careers"
+            }
+          ]
+        },
+        {
+          "title": "Tools",
+          "children": [
+            {
+              "title": "trending",
+              "url": "/x-trending"
+            },
+            {
+              "title": "competitor-analysis",
+              "url": "/competitor-analysis"
+            },
+            {
+              "title": "downloader",
+              "url": "/downloader"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [
+      {
+        "title": "Request Demo",
+        "url": "/request-demo",
+        "variant": "default",
+        "icon": "Calendar"
+      }
+    ],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "Billing",
+          "url": "/settings/billing",
+          "icon": "CreditCard"
+        },
+        {
+          "title": "Activity",
+          "url": "/activity",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true,
+    "topbanner": null
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "",
+      "description": "Maximize ROI with our Generative AI ad platform! Create, distribute, optimize. Ignite your ad revolution",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "/",
+        "width": 1024,
+        "height": 1024
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Resource",
+          "children": [
+            {
+              "title": "Pricing",
+              "url": "/pricing",
+              "target": "_self"
+            },
+            {
+              "title": "Feedback",
+              "url": "/feedback",
+              "target": "_self"
+            },
+            {
+              "title": "About Us",
+              "url": "/about-us",
+              "target": "_self"
+            },
+            {
+              "title": "Careers",
+              "url": "/careers",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Features",
+          "children": [
+            {
+              "title": "SEO",
+              "url": "/use-cases/seo",
+              "target": "_self"
+            },
+            {
+              "title": "Social Media",
+              "url": "/use-cases/social-media",
+              "target": "_self"
+            },
+            {
+              "title": "Email Marketing",
+              "url": "/use-cases/email-marketing",
+              "target": "_self"
+            },
+            {
+              "title": "Infographics",
+              "url": "/use-cases/infographics",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "By Use Cases",
+          "children": [
+            {
+              "title": "AIShawn vs tryatria",
+              "url": "/blog/aishawn-vs-chatgpt",
+              "target": "_self"
+            },
+            {
+              "title": "AIShawn vs Jasper AI",
+              "url": "/blog/aishawn-vs-jasper-ai",
+              "target": "_self"
+            },
+            {
+              "title": "Style Guide",
+              "url": "/style-guide",
+              "target": "_self"
+            },
+            {
+              "title": "Dropispy Alternative",
+              "url": "/alternatives/dropispy",
+              "target": "_self"
+            },
+            {
+              "title": "Pipiads Alternative",
+              "url": "/alternatives/pipiads",
+              "target": "_self"
+            },
+            {
+              "title": "Powerad Spy Alternative",
+              "url": "/alternatives/powerad-spy",
+              "target": "_self"
+            },
+            {
+              "title": "Bigspy Alternative",
+              "url": "/alternatives/bigspy",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Alternatives",
+          "children": [
+            {
+              "title": "Foreplay Alternatives",
+              "url": "/alternatives/foreplay",
+              "target": "_self"
+            },
+            {
+              "title": "Motion Alternative",
+              "url": "/alternatives/motion",
+              "target": "_self"
+            },
+            {
+              "title": "Facebook Ads Manager Alternative",
+              "url": "/alternatives/facebook-ads-manager",
+              "target": "_self"
+            },
+            {
+              "title": "TikTok Creative Center Alternative",
+              "url": "/alternatives/tiktok-creative-center",
+              "target": "_self"
+            },
+            {
+              "title": "Adcreative Alternative",
+              "url": "/alternatives/adcreative",
+              "target": "_self"
+            },
+            {
+              "title": "Adplexity Alternative",
+              "url": "/alternatives/adplexity",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": [
+        {
+          "title": "X",
+          "icon": "RiTwitterXFill",
+          "url": "https://x.com/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Github",
+          "icon": "Github",
+          "url": "https://github.com/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "icon": "RiDiscordFill",
+          "url": "https://discord.gg/your-app-name",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "icon": "Mail",
+          "url": "mailto:support@your-domain.com",
+          "target": "_self"
+        }
+      ]
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true
+  }
+}

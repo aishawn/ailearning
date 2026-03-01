@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "SEO - AIShawn",
+    "description": "Optimize your content for search engines with AIShawn's SEO tools"
+  },
+  "page": {
+    "title": "SEO",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "SEO Optimization",
+        "description": "Create SEO-optimized content and ads that rank higher and drive organic traffic with AIShawn's intelligent tools.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

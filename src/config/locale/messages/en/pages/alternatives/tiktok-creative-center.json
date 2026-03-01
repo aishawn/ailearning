@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "TikTok Creative Center Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to TikTok Creative Center for creating engaging TikTok ads"
+  },
+  "page": {
+    "title": "TikTok Creative Center Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than TikTok Creative Center",
+        "description": "Create stunning TikTok ads with AI-powered tools. AIShawn offers more features, better templates, and smarter automation than TikTok Creative Center.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

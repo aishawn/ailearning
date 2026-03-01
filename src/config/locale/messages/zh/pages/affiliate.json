@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "title": "联盟计划 - 分享 AIShawn，赚取现金",
+    "description": "加入我们的联盟计划，通过推广 AIShawn 赚取 25% 的持续佣金。认识做广告的人？分享 AIShawn 并赚取现金。"
+  },
+  "page": {
+    "title": "联盟计划",
+    "show_sections": ["hero", "stats", "usage", "faq", "cta"],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "分享 AIShawn，赚取现金。就这么简单。",
+        "highlight_text": "赚取现金",
+        "description": "认识做广告的人？分享 AIShawn 并赚取 25% 的持续佣金。",
+        "buttons": [
+          {
+            "title": "生成我的推荐链接",
+            "icon": "Link",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false,
+        "show_testimonials": false
+      },
+      "stats": {
+        "id": "stats",
+        "title": "您的收益",
+        "description": "如果有人通过您的链接加入 AIShawn，我们将每月自动向您支付 25% 的佣金。",
+        "items": [
+          {
+            "title": "25%",
+            "description": "持续佣金"
+          },
+          {
+            "title": "$0",
+            "description": "最低支付门槛"
+          },
+          {
+            "title": "每月",
+            "description": "支付频率"
+          }
+        ]
+      },
+      "usage": {
+        "block": "features-step",
+        "id": "usage",
+        "title": "它是如何工作的？",
+        "description": "以下是如何加入并开始通过 AIShawn 赚取收益",
+        "items": [
+          {
+            "title": "获取您的链接",
+            "description": "注册我们的联盟计划并获取您的专属分享链接。",
+            "image": {
+              "src": "https://picsum.photos/seed/affiliate-step1/400/300",
+              "alt": "获取您的链接"
+            }
+          },
+          {
+            "title": "与您的网络分享",
+            "description": "在 LinkedIn 上发布，在 Slack 群组中提及，或发送给需要更好广告工具的营销人员。",
+            "image": {
+              "src": "https://picsum.photos/seed/affiliate-step2/400/300",
+              "alt": "与您的网络分享"
+            }
+          },
+          {
+            "title": "每月赚取现金",
+            "description": "通过您的链接注册付费 AIShawn 计划的每个人，您都可以获得 25% 的佣金。",
+            "image": {
+              "src": "https://picsum.photos/seed/affiliate-step3/400/300",
+              "alt": "每月赚取现金"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "常见问题",
+        "description": "查找有关我们联盟计划的常见问题答案",
+        "items": [
+          {
+            "question": "AIShawn 到底是做什么的？",
+            "answer": "AIShawn 是最强大的 AI 驱动的广告创建和管理平台。使用 AIShawn，您可以研究竞争对手、创建广告活动、分析性能并迭代有效的方法 - 所有这些都在一个地方完成。此外，您还可以获得关于创意性能的洞察，这些洞察在其他地方根本找不到，帮助您不仅了解什么有效，还了解为什么有效。"
+          },
+          {
+            "question": "推荐计划是如何工作的？",
+            "answer": "注册联盟计划后，您将能够通过您的门户获取您的推荐链接。将您的链接发送给您想要推荐的任何人，并在他们订阅时获得佣金。"
+          },
+          {
+            "question": "如何跟踪我的推荐和收益？",
+            "answer": "您将获得一个实时仪表板，显示点击、注册和佣金。无需猜测，无需等待月度报告 - 您可以随时准确查看谁注册了以及您赚了多少钱。"
+          },
+          {
+            "question": "我应该与谁分享这个？",
+            "answer": "任何运行广告的人：效果营销人员、创意策略师、媒体购买者、代理团队。如果他们花时间进行广告研究、创建、分析或报告，他们就需要 AIShawn。"
+          },
+          {
+            "question": "我能赚多少钱？",
+            "answer": "无论他们支付多少，只要他们保持订阅，您每月都能获得 25% 的佣金。如果有人注册我们的 $109/月计划，您每月可赚取 $27.25。将其扩展到多个推荐，您将获得可观的持续收入。"
+          },
+          {
+            "question": "人们为什么转向 AIShawn？",
+            "answer": "大多数人浪费时间在 5 个以上的工具之间切换来研究竞争对手、创建广告、启动活动和分析性能。AIShawn 在一个真正有意义的平台上处理整个工作流程。此外，您还可以获得在其他地方根本找不到的洞察 - 比如准确了解为什么您的最佳广告有效，实时跟踪竞争对手数量和策略变化，并获得将几乎获胜者转变为冠军的 AI 推荐。"
+          },
+          {
+            "question": "我如何获得付款？",
+            "answer": "通过 PayPal 或直接存款每月支付。没有最低门槛，无需等待 90 天才能获得首次付款。"
+          },
+          {
+            "question": "还有其他问题吗？",
+            "answer": "通过 support@aishawn.life 或登录后通过聊天联系我们。"
+          }
+        ]
+      }
+    }
+  }
+}

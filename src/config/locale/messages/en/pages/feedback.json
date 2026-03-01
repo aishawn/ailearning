@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Feedback",
+    "description": "Share your feedback and help us improve AIShawn"
+  },
+  "page": {
+    "title": "Feedback",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Share Your Feedback",
+        "description": "Your feedback helps us improve. Share your thoughts, suggestions, or report issues to help us make AIShawn better.",
+        "buttons": [
+          {
+            "title": "Submit Feedback",
+            "icon": "MessageSquare",
+            "url": "/activity/feedbacks",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

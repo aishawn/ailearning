@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "API Catalog v2",
+    "description": "Browse available API endpoints and services in version 2.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "API Catalog v2",
+        "description": "Explore all available API endpoints, services, and resources in our v2 API."
+      },
+      "catalog": {
+        "id": "catalog",
+        "title": "Available Services",
+        "description": "Browse through our comprehensive API catalog.",
+        "items": [
+          {
+            "title": "Authentication APIs",
+            "description": "User authentication and authorization endpoints."
+          },
+          {
+            "title": "Data APIs",
+            "description": "Data management and retrieval services."
+          },
+          {
+            "title": "AI Services",
+            "description": "Artificial intelligence and machine learning endpoints."
+          }
+        ]
+      }
+    }
+  }
+}

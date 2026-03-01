@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Careers",
+    "description": "Join the AIShawn team and help shape the future of AI-powered advertising"
+  },
+  "page": {
+    "title": "Careers",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Join Our Team",
+        "description": "We're building the future of AI-powered advertising. Join us and help shape the next generation of marketing tools.",
+        "buttons": [
+          {
+            "title": "View Open Positions",
+            "icon": "Briefcase",
+            "url": "#",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

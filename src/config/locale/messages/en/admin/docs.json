@@ -1,0 +1,44 @@
+{
+  "fields": {
+    "slug": "Slug",
+    "slug_tip": "Path-style slug, e.g. vla/algorithm. Overrides file-based doc with the same path.",
+    "title": "Title",
+    "description": "Description",
+    "content": "Content",
+    "created_at": "Created At"
+  },
+  "list": {
+    "title": "Docs",
+    "crumbs": {
+      "admin": "Admin",
+      "docs": "Docs"
+    },
+    "buttons": {
+      "add": "Add Doc",
+      "edit": "Edit Doc",
+      "view": "View Doc"
+    }
+  },
+  "add": {
+    "title": "Add Doc",
+    "crumbs": {
+      "admin": "Admin",
+      "docs": "Docs",
+      "add": "Add Doc"
+    },
+    "buttons": {
+      "submit": "Add Doc"
+    }
+  },
+  "edit": {
+    "title": "Edit Doc",
+    "crumbs": {
+      "admin": "Admin",
+      "docs": "Docs",
+      "edit": "Edit Doc"
+    },
+    "buttons": {
+      "submit": "Save Changes"
+    }
+  }
+}

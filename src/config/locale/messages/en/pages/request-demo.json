@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Request Demo",
+    "description": "Request a demo of AIShawn and see how it can transform your advertising campaigns"
+  },
+  "page": {
+    "title": "Request Demo",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Request a Demo",
+        "description": "See AIShawn in action. Schedule a personalized demo and discover how our AI-powered platform can transform your advertising campaigns.",
+        "buttons": [
+          {
+            "title": "Schedule Demo",
+            "icon": "Calendar",
+            "url": "#",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

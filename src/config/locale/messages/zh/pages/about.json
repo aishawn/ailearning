@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "关于我们",
+    "description": "了解更多关于我们的平台和使命。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "关于我们的平台",
+        "description": "发现我们通过AI驱动的解决方案革命性地改变广告的使命。"
+      },
+      "content": {
+        "id": "content",
+        "title": "我们的故事",
+        "description": "了解我们的旅程和平台背后的技术。",
+        "items": [
+          {
+            "title": "我们的使命",
+            "description": "通过AI驱动的广告解决方案赋能企业。"
+          },
+          {
+            "title": "我们的技术",
+            "description": "现代广告需求的尖端AI技术。"
+          },
+          {
+            "title": "我们的团队",
+            "description": "致力于创新的经验丰富的专业人士。"
+          }
+        ]
+      }
+    }
+  }
+}

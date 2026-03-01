@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Bigspy Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Bigspy for ad intelligence and competitor analysis"
+  },
+  "page": {
+    "title": "Bigspy Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Bigspy",
+        "description": "Get comprehensive ad intelligence and competitor insights with AI-powered tools. AIShawn offers more data sources, better analytics, and smarter automation than Bigspy.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

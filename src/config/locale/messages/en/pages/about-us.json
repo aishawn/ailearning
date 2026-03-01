@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "About Us",
+    "description": "Learn more about AIShawn and our mission to revolutionize advertising"
+  },
+  "page": {
+    "title": "About Us",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "About AIShawn",
+        "description": "AIShawn is an AI-powered, all-in-one platform for performance marketers. We help businesses create, launch, and optimize campaigns across every channel from one place.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Motion Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Motion for creating animated ads and videos"
+  },
+  "page": {
+    "title": "Motion Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Motion",
+        "description": "Create stunning animated ads and videos with AI-powered tools. AIShawn offers more templates, better automation, and cross-platform support.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

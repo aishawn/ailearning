@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Server Status",
+    "description": "Real-time server status and system health monitoring.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Server Status",
+        "description": "Monitor real-time server status, uptime, and system health metrics."
+      },
+      "status": {
+        "id": "status",
+        "title": "System Health",
+        "description": "Current system status and performance indicators.",
+        "items": [
+          {
+            "title": "Server Uptime",
+            "description": "Current server uptime and availability status."
+          },
+          {
+            "title": "Response Times",
+            "description": "API response times and performance metrics."
+          },
+          {
+            "title": "System Load",
+            "description": "Current system load and resource utilization."
+          }
+        ]
+      }
+    }
+  }
+}

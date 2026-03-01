@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "服务器状态",
+    "description": "实时服务器状态和系统健康监控。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "服务器状态",
+        "description": "监控实时服务器状态、正常运行时间和系统健康指标。"
+      },
+      "status": {
+        "id": "status",
+        "title": "系统健康",
+        "description": "当前系统状态和性能指标。",
+        "items": [
+          {
+            "title": "服务器正常运行时间",
+            "description": "当前服务器正常运行时间和可用性状态。"
+          },
+          {
+            "title": "响应时间",
+            "description": "API响应时间和性能指标。"
+          },
+          {
+            "title": "系统负载",
+            "description": "当前系统负载和资源利用率。"
+          }
+        ]
+      }
+    }
+  }
+}

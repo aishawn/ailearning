@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Foreplay Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Foreplay for creating engaging ad creatives"
+  },
+  "page": {
+    "title": "Foreplay Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Foreplay",
+        "description": "Create stunning ad creatives with AI-powered tools. AIShawn offers more features, better templates, and smarter automation than Foreplay.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

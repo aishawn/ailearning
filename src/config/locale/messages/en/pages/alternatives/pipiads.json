@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Pipiads Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Pipiads for ad spy and creative inspiration"
+  },
+  "page": {
+    "title": "Pipiads Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Pipiads",
+        "description": "Discover winning ad creatives and get inspiration with AI-powered tools. AIShawn offers more ad data, better search capabilities, and smarter insights than Pipiads.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

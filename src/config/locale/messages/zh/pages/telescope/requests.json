@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "请求监控",
+    "description": "监控和分析系统请求和API调用。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "请求监控",
+        "description": "监控系统请求、API调用和性能分析。"
+      },
+      "monitoring": {
+        "id": "monitoring",
+        "title": "请求分析",
+        "description": "系统请求的详细分析和监控。",
+        "items": [
+          {
+            "title": "请求量",
+            "description": "监控请求量和流量模式。"
+          },
+          {
+            "title": "响应时间",
+            "description": "跟踪API响应时间和性能。"
+          },
+          {
+            "title": "错误分析",
+            "description": "分析请求错误和失败模式。"
+          }
+        ]
+      }
+    }
+  }
+}

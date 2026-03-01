@@ -1,0 +1,19 @@
+{
+  "webhook": {
+    "title": "FAL AI Webhook",
+    "description": "Processing FAL AI webhook notification",
+    "success": "Webhook processed successfully",
+    "error": "Failed to process webhook",
+    "invalid_payload": "Invalid webhook payload",
+    "task_not_found": "AI task not found",
+    "task_updated": "AI task updated successfully"
+  }
+}
+
+
+
+
+
+
+
+

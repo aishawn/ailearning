@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Adcreative Alternative - AIShawn",
+    "description": "AIShawn is the best alternative to Adcreative for ad intelligence and competitor analysis"
+  },
+  "page": {
+    "title": "Adcreative Alternative",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Better Than Adcreative",
+        "description": "Create, analyze, and optimize ad creatives with AI-powered insights. AIShawn delivers stronger creative intelligence, deeper insights, and smarter automation than Adcreative.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

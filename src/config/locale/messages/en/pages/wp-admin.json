@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Admin - AIShawn",
+    "description": "AIShawn Admin Dashboard"
+  },
+  "page": {
+    "title": "Admin",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Admin Dashboard",
+        "description": "Access the admin dashboard to manage your account and settings.",
+        "buttons": [
+          {
+            "title": "Go to Admin",
+            "icon": "Settings",
+            "url": "/admin",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

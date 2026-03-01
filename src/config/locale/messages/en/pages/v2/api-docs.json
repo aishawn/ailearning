@@ -1,0 +1,40 @@
+{
+  "page": {
+    "title": "API Documentation v2",
+    "description": "Complete API documentation for version 2 endpoints and services.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "API Documentation v2",
+        "description": "Comprehensive documentation for our v2 API endpoints, including authentication, rate limits, and example requests.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "url": "/api/v2",
+            "target": "_self",
+            "variant": "default"
+          }
+        ]
+      },
+      "content": {
+        "id": "content",
+        "title": "API Overview",
+        "description": "Learn how to integrate with our v2 API endpoints for maximum performance and reliability.",
+        "items": [
+          {
+            "title": "Authentication",
+            "description": "Secure your API requests with proper authentication methods."
+          },
+          {
+            "title": "Rate Limits",
+            "description": "Understanding API rate limits and best practices for handling them."
+          },
+          {
+            "title": "Error Handling",
+            "description": "Learn how to handle API errors gracefully in your applications."
+          }
+        ]
+      }
+    }
+  }
+}

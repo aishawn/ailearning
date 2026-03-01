@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Infographics - AIShawn",
+    "description": "Create stunning infographics with AIShawn's AI-powered design tools"
+  },
+  "page": {
+    "title": "Infographics",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Create Stunning Infographics",
+        "description": "Transform complex data into beautiful, engaging infographics with AIShawn's AI-powered design tools.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "page": {
+    "title": "API文档 v2",
+    "description": "版本2端点和服务的完整API文档。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "API文档 v2",
+        "description": "我们v2 API端点的综合文档，包括身份验证、速率限制和示例请求。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "url": "/api/v2",
+            "target": "_self",
+            "variant": "default"
+          }
+        ]
+      },
+      "content": {
+        "id": "content",
+        "title": "API概述",
+        "description": "了解如何集成我们的v2 API端点以获得最佳性能和可靠性。",
+        "items": [
+          {
+            "title": "身份验证",
+            "description": "使用适当的身份验证方法保护您的API请求。"
+          },
+          {
+            "title": "速率限制",
+            "description": "了解API速率限制和处理它们的最佳实践。"
+          },
+          {
+            "title": "错误处理",
+            "description": "学习如何在应用程序中优雅地处理API错误。"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Foreplay 替代方案 - AIShawn",
+    "description": "AIShawn 是 Foreplay 的最佳替代方案，用于创建引人入胜的广告创意"
+  },
+  "page": {
+    "title": "Foreplay 替代方案",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "比 Foreplay 更好",
+        "description": "使用 AI 驱动的工具创建出色的广告创意。AIShawn 提供比 Foreplay 更多的功能、更好的模板和更智能的自动化。",
+        "buttons": [
+          {
+            "title": "开始使用",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

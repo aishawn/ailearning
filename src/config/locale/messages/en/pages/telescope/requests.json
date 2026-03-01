@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "Request Monitoring",
+    "description": "Monitor and analyze system requests and API calls.",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Request Monitoring",
+        "description": "Monitor system requests, API calls, and performance analytics."
+      },
+      "monitoring": {
+        "id": "monitoring",
+        "title": "Request Analytics",
+        "description": "Detailed analytics and monitoring of system requests.",
+        "items": [
+          {
+            "title": "Request Volume",
+            "description": "Monitor request volume and traffic patterns."
+          },
+          {
+            "title": "Response Times",
+            "description": "Track API response times and performance."
+          },
+          {
+            "title": "Error Analysis",
+            "description": "Analyze request errors and failure patterns."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "反馈",
+    "description": "分享您的反馈，帮助我们改进 AIShawn"
+  },
+  "page": {
+    "title": "反馈",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "分享您的反馈",
+        "description": "您的反馈帮助我们改进。分享您的想法、建议或报告问题，帮助我们让 AIShawn 变得更好。",
+        "buttons": [
+          {
+            "title": "提交反馈",
+            "icon": "MessageSquare",
+            "url": "/activity/feedbacks",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}

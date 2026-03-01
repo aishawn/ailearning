@@ -1,0 +1,32 @@
+{
+  "page": {
+    "title": "系统配置",
+    "description": "系统配置和设置概述。",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "系统配置",
+        "description": "查看和管理系统配置设置和参数。"
+      },
+      "config": {
+        "id": "config",
+        "title": "配置概述",
+        "description": "当前系统配置和设置。",
+        "items": [
+          {
+            "title": "应用程序设置",
+            "description": "核心应用程序配置参数。"
+          },
+          {
+            "title": "数据库配置",
+            "description": "数据库连接和性能设置。"
+          },
+          {
+            "title": "API配置",
+            "description": "API端点和集成设置。"
+          }
+        ]
+      }
+    }
+  }
+}

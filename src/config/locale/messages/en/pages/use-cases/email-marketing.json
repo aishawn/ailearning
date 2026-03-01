@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Email Marketing - AIShawn",
+    "description": "Create compelling email marketing campaigns with AIShawn's AI tools"
+  },
+  "page": {
+    "title": "Email Marketing",
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Email Marketing Made Easy",
+        "description": "Design and optimize email marketing campaigns that convert with AIShawn's intelligent design and copy tools.",
+        "buttons": [
+          {
+            "title": "Get Started",
+            "icon": "Rocket",
+            "url": "/sign-up",
+            "target": "_self",
+            "variant": "default"
+          }
+        ],
+        "show_avatars": false,
+        "show_award": false
+      }
+    }
+  }
+}
