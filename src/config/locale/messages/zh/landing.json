@@ -14,19 +14,25 @@
     "nav": {
       "items": [
         {
-          "title": "功能亮点",
-          "url": "/#features",
-          "icon": "Sparkles"
+          "title": "文档",
+          "url": "/docs"
         },
         {
-          "title": "案例展示",
-          "url": "/showcases",
-          "icon": "Box"
+          "title": "知识",
+          "children": [
+            { "title": "VLA", "url": "/docs/VLA" },
+            { "title": "VLM", "url": "/docs/VLM" },
+            { "title": "VLA 基础设施", "url": "/docs/VLA_Infra" },
+            { "title": "VLA 资讯", "url": "/docs/VLA_info" },
+            { "title": "行业应用", "url": "/docs/行业" }
+          ]
         },
         {
-          "title": "价格",
-          "url": "/pricing",
-          "icon": "DollarSign"
+          "title": "资源",
+          "children": [
+            { "title": "博客", "url": "/blog" },
+            { "title": "招聘", "url": "/careers" }
+          ]
         },
         {
           "title": "AI",

@@ -1,26 +1,19 @@
 {
   "page": {
-    "show_sections": [
-      "hero",
-      "stats",
-      "introduce",
-      "features",
-      "showcases",
-      "testimonials"
-    ],
+    "show_sections": ["hero", "benefits", "usage", "showcases", "cta"],
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "The AI Ads Agent to get 10X ROI",
-        "highlight_text": "10X ROI",
-        "description": "AIShawn: the AI-powered, all-in-one hub for performance marketers—create, launch, and optimize campaigns across every channel from one place.",
+        "title": "AI Algorithms & News",
+        "highlight_text": "AI",
+        "description": "Your hub for the latest vision-language and embodied AI algorithms, research updates, and industry insights. Explore the knowledge graph to jump to topics.",
         "announcement": null,
         "tip": null,
         "buttons": [
           {
-            "title": "Request Demo",
-            "icon": "Calendar",
-            "url": "/request-demo",
+            "title": "Browse Docs",
+            "icon": "BookOpen",
+            "url": "/docs",
             "target": "_self",
             "variant": "default"
           }
@@ -28,191 +21,86 @@
         "show_avatars": false,
         "avatars_tip": null,
         "show_award": false,
-        "show_testimonials": true,
-        "youtube_url": "https://www.youtube.com/watch?v=PhX1Fz1VHRw",
-        "image": {
-          "src": "/imgs/features/admin.png",
-          "alt": "AIShawn Life Platform",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/admin-dark.png",
-          "alt": "AIShawn Life Platform",
-          "width": 1200,
-          "height": 800
-        },
-        "background_image": null
+        "show_testimonials": false,
+        "youtube_url": null,
+        "image": null,
+        "image_invert": null,
+        "background_image": null,
+        "knowledge_graph": {
+          "title": "Knowledge",
+          "nodes": [
+            {
+              "id": "vla",
+              "title": "VLA",
+              "url": "/docs/VLA",
+              "description": "Vision-Language-Action"
+            },
+            {
+              "id": "vlm",
+              "title": "VLM",
+              "url": "/docs/VLM",
+              "description": "Vision-Language Models"
+            },
+            {
+              "id": "vla-infra",
+              "title": "VLA Infra",
+              "url": "/docs/VLA_Infra",
+              "description": "Infrastructure & Benchmarks"
+            },
+            {
+              "id": "vla-info",
+              "title": "VLA News",
+              "url": "/docs/VLA_info",
+              "description": "Latest research & news"
+            },
+            {
+              "id": "industry",
+              "title": "Industries",
+              "url": "/docs/行业",
+              "description": "Applications by industry"
+            }
+          ]
+        }
       },
 
       "benefits": {
         "block": "features-accordion",
         "id": "benefits",
-        "title": "Everything you need to run high-performing ad campaigns",
-        "label": "Capabilities",
-        "description": "We transform data quality into a differentiator that drives your growth.",
+        "title": "Knowledge areas",
+        "label": "Topics",
+        "description": "Structured coverage of vision-language models, embodied AI, infrastructure, and industry applications.",
         "items": [
           {
-            "title": "Strategic Planning",
-            "description": "Unlock smarter advertising with AI-driven insights. Plan campaigns with precision, optimize budgets, and target the right audience from the start.",
+            "title": "VLA",
+            "description": "Vision-Language-Action: algorithms and models for robot control and embodied AI. Explore theory, benchmarks, and latest papers.",
             "icon": "Target",
-            "image": {
-              "src": "/imgs/features/user-billing.png",
-              "alt": "Strategic Planning"
-            }
+            "image": { "src": "/imgs/features/user-billing.png", "alt": "VLA" }
           },
           {
-            "title": "Audience Intelligence",
-            "description": "Build a complete 360° customer profile. Leverage AI to analyze behaviors, interests, and demographics for hyper-personalized targeting.",
+            "title": "VLM",
+            "description": "Vision-Language Models: multimodal understanding and generation. From foundation models to domain-specific applications.",
             "icon": "Users",
             "image": {
               "src": "/imgs/features/admin-settings.png",
-              "alt": "Audience Intelligence"
+              "alt": "VLM"
             }
           },
           {
-            "title": "AI-Powered Content Generation",
-            "description": "Generate compelling ad content in seconds. Our AI crafts tailored messaging, visuals, and copy to engage your audience and drive conversions.",
+            "title": "Infrastructure & benchmarks",
+            "description": "Simulators, datasets, hardware, and evaluation. Reproducible research and deployment tooling.",
             "icon": "Sparkles",
             "image": {
               "src": "/imgs/features/landing-page.png",
-              "alt": "AI Content Generation"
+              "alt": "Infra"
             }
           },
           {
-            "title": "Smart Ad Placement and Reporting",
-            "description": "Track, analyze, and optimize your ads in real-time. Get in-depth insights into performance and maximize ROI—all from one platform.",
+            "title": "Industry applications",
+            "description": "Autonomous driving, healthcare, UAV, and other verticals. Use cases and real-world deployments.",
             "icon": "BarChart3",
             "image": {
               "src": "/imgs/features/landing-page.png",
-              "alt": "Reporting"
-            }
-          }
-        ]
-      },
-      "usage": {
-        "block": "features-step",
-        "id": "usage",
-        "title": "How to Launch with AIShawn",
-        "description": "Get your AI SaaS startup running in three simple steps:",
-        "image": {
-          "src": "/imgs/features/1.png",
-          "alt": "usage"
-        },
-        "image_position": "left",
-        "text_align": "center",
-        "items": [
-          {
-            "title": "Get AIShawn",
-            "description": "Buy AIShawn with a one-time payment. Check your email for the code and documentation.",
-            "image": {
-              "src": "/imgs/features/5.png",
-              "alt": "usage"
-            }
-          },
-          {
-            "title": "Start Your Project",
-            "description": "Read the documentation and clone the code of AIShawn. Start building your AI SaaS startup.",
-            "image": {
-              "src": "/imgs/features/6.png",
-              "alt": "usage"
-            }
-          },
-          {
-            "title": "Customize Your Project",
-            "description": "Modify the template with your data and contents. Specific AI functionality needs.",
-            "image": {
-              "src": "/imgs/features/7.png",
-              "alt": "usage"
-            }
-          },
-          {
-            "title": "Deploy to Production",
-            "description": "Deploy your project to production with a few steps and start serving customers immediately.",
-            "image": {
-              "src": "/imgs/features/8.png",
-              "alt": "usage"
-            }
-          }
-        ],
-        "className": "bg-muted"
-      },
-      "showcases": {
-        "id": "showcases",
-        "title": "Case Studies",
-        "description": "AIShawn Life is proven to boost ad performance, maximize ROI, and streamline campaigns with AI-driven automation, real-time insights, and predictive analytics.",
-        "groups": [],
-        "items": [
-          {
-            "title": "TAL Education Group",
-            "description": "Selling children's learning pads. Empowering young learners with interactive technology.<br/><strong>300%+ Higher conversion rates</strong><br/>3x Blended ROAS<br/>650% Revenue",
-            "image": {
-              "src": "/imgs/cases/1.png",
-              "alt": "TAL Education Group"
-            }
-          },
-          {
-            "title": "Collov.ai",
-            "description": "One-Click AI Virtual Staging.<br/>Series A+ startup<br/><strong>Blended ROAS: 58%</strong><br/>CVR: 58%",
-            "image": {
-              "src": "/imgs/cases/2.png",
-              "alt": "Collov.ai"
-            }
-          },
-          {
-            "title": "Halliday",
-            "description": "The world's first Proactive AI Glasses with an Invisible Display<br/><strong>13x Blended ROAS</strong><br/>$3.3M Revenue",
-            "image": {
-              "src": "/imgs/cases/3.png",
-              "alt": "Halliday"
-            }
-          },
-          {
-            "title": "Clarity AI",
-            "description": "An AI-powered inbox that handles all the boring & repetitive email tasks for you<br/><strong>84% CAC reduction</strong>",
-            "image": {
-              "src": "/imgs/cases/4.png",
-              "alt": "Clarity AI"
-            }
-          },
-          {
-            "title": "iHealth",
-            "description": "Reliable home testing solutions for flu and COVID-19.<br/><strong>100M+ Revenue</strong>",
-            "image": {
-              "src": "/imgs/cases/5.png",
-              "alt": "iHealth"
-            }
-          },
-          {
-            "title": "Articuler AI",
-            "description": "Automating content workflows to scale engagement.<br/><strong>79% CAC reduction</strong><br/>600% Expansion",
-            "image": {
-              "src": "/imgs/cases/6.png",
-              "alt": "Articuler AI"
-            }
-          },
-          {
-            "title": "PamHQ",
-            "description": "Designed specifically for automotive dealerships functioning as an AI receptionist<br/><strong>21% CAC reduction</strong>",
-            "image": {
-              "src": "/imgs/cases/7.png",
-              "alt": "PamHQ"
-            }
-          },
-          {
-            "title": "BitSport",
-            "description": "Play, compete, and earn crypto rewards in popular games.<br/><strong>37% CAC reduction</strong>",
-            "image": {
-              "src": "/imgs/cases/8.png",
-              "alt": "BitSport"
-            }
-          },
-          {
-            "title": "Pika Art",
-            "description": "Creating AI-powered videos. Bringing ideas to life with stunning visuals and animation.<br/>Series B Funding Stage<br/><strong>109M Total Funding</strong>",
-            "image": {
-              "src": "/imgs/cases/9.png",
-              "alt": "Pika Art"
+              "alt": "Industries"
             }
           }
         ]
@@ -248,20 +136,6 @@
             "answer": "Absolutely! All AIShawn templates are fully customizable. You can modify the design, features, and functionality to match your brand identity and specific business requirements while maintaining the robust underlying infrastructure."
           }
         ]
-      },
-      "cta": {
-        "id": "cta",
-        "title": "Get Started Now",
-        "description": "Don't wait another minute! Ready to unlock the magic of AI and marketing?",
-        "buttons": [
-          {
-            "title": "Request Demo",
-            "url": "/request-demo",
-            "target": "_self",
-            "icon": "Calendar"
-          }
-        ],
-        "className": "bg-muted"
       },
       "subscribe": {
         "id": "subscribe",

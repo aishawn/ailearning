@@ -62,6 +62,20 @@ export interface Footer extends Section {
   className?: string;
 }
 
+// knowledge graph node for hero (clickable node linking to doc/category)
+export interface KnowledgeGraphNode {
+  id?: string;
+  title: string;
+  url: string;
+  group?: string;
+  description?: string;
+}
+
+export interface KnowledgeGraph {
+  title?: string;
+  nodes: KnowledgeGraphNode[];
+}
+
 // hero props for hero component
 export interface Hero extends Section {
   id?: string;
@@ -74,6 +88,7 @@ export interface Hero extends Section {
   youtube_url?: string;
   video_url?: string;
   logos?: Logos;
+  knowledge_graph?: KnowledgeGraph;
 }
 
 export interface Logos extends Section {}

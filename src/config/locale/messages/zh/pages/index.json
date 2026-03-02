@@ -2,62 +2,43 @@
   "page": {
     "show_sections": [
       "hero",
-      "logos",
-      "introduce",
       "benefits",
       "usage",
-      "features",
-      "stats",
-      "testimonials",
-      "faq",
       "cta"
     ],
     "sections": {
       "hero": {
         "id": "hero",
-        "title": "一小时快速上线你的 AI 创业项目",
-        "highlight_text": "一小时",
-        "description": "AIShawn 是用于构建 AI SaaS 创业项目的 NextJS 项目模板。<br/>集成常用功能，快速上线你的产品。",
-        "announcement": {
-          "badge": "全新",
-          "title": "🎉 AIShawn 模板二已发布",
-          "url": "/pricing"
-        },
-        "tip": "🎁 前 1000 名用户特价优惠",
+        "title": "AI 算法与资讯",
+        "highlight_text": "AI",
+        "description": "专注视觉-语言与具身智能最新算法、研究动态与行业应用。点击知识图谱进入对应知识页。",
+        "announcement": null,
+        "tip": null,
         "buttons": [
           {
-            "title": "立即开始",
-            "icon": "Zap",
-            "url": "/pricing",
-            "target": "_self",
-            "variant": "default"
-          },
-          {
-            "title": "阅读文档",
+            "title": "浏览文档",
             "icon": "BookOpenText",
             "url": "/docs",
-            "target": "_blank",
-            "variant": "outline"
+            "target": "_self",
+            "variant": "default"
           }
         ],
-        "show_avatars": true,
-        "avatars_tip": "999+ 用户在使用 AIShawn 上站",
+        "show_avatars": false,
+        "avatars_tip": null,
         "show_award": false,
-        "image": {
-          "src": "/imgs/features/admin.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "image_invert": {
-          "src": "/imgs/features/admin-dark.png",
-          "alt": "hero",
-          "width": 1200,
-          "height": 800
-        },
-        "background_image": {
-          "src": "/imgs/bg/tree.jpg",
-          "alt": "hero"
+        "show_testimonials": false,
+        "image": null,
+        "image_invert": null,
+        "background_image": null,
+        "knowledge_graph": {
+          "title": "知识图谱",
+          "nodes": [
+            { "id": "vla", "title": "VLA", "url": "/docs/VLA", "description": "视觉-语言-动作" },
+            { "id": "vlm", "title": "VLM", "url": "/docs/VLM", "description": "视觉语言模型" },
+            { "id": "vla-infra", "title": "VLA 基础设施", "url": "/docs/VLA_Infra", "description": "基础设施与基准" },
+            { "id": "vla-info", "title": "VLA 资讯", "url": "/docs/VLA_info", "description": "最新研究与动态" },
+            { "id": "industry", "title": "行业应用", "url": "/docs/行业", "description": "按行业分类的应用" }
+          ]
         }
       },
       "logos": {
@@ -153,44 +134,41 @@
       "benefits": {
         "block": "features-accordion",
         "id": "benefits",
-        "title": "为何选择 AIShawn",
-        "label": "产品优势",
-        "description": "你获得一切 AI 创业所需——从开箱即用的模板到专业技术支持。",
+        "title": "知识领域",
+        "label": "主题",
+        "description": "覆盖视觉语言模型、具身智能、基础设施与行业应用的结构化内容。",
         "items": [
           {
-            "title": "全栈解决方案",
-            "description": "基于 Next.js，集成认证、支付、AI，一站式开箱即用。",
+            "title": "VLA",
+            "description": "视觉-语言-动作：机器人控制与具身智能的算法与模型。包含理论、基准与最新论文。",
             "icon": "RiNextjsFill",
-            "image": {
-              "src": "/imgs/features/user-billing.png",
-              "alt": "benefits"
-            }
+            "image": { "src": "/imgs/features/user-billing.png", "alt": "VLA" }
           },
           {
-            "title": "丰富模板库",
-            "description": "多样的 AI SaaS 模板，点击即用，涵盖聊天、图像生成等多场景。",
+            "title": "VLM",
+            "description": "视觉语言模型：多模态理解与生成，从基础模型到领域应用。",
             "icon": "RiClapperboardAiLine",
-            "image": {
-              "src": "/imgs/features/admin-settings.png",
-              "alt": "benefits"
-            }
+            "image": { "src": "/imgs/features/admin-settings.png", "alt": "VLM" }
           },
           {
-            "title": "专属技术指导",
-            "description": "享受专属技术支持与开发者社区，为你的成功保驾护航。",
+            "title": "基础设施与基准",
+            "description": "仿真器、数据集、硬件与评估。可复现研究与部署工具。",
             "icon": "RiCodeFill",
-            "image": {
-              "src": "/imgs/features/landing-page.png",
-              "alt": "benefits"
-            }
+            "image": { "src": "/imgs/features/landing-page.png", "alt": "Infra" }
+          },
+          {
+            "title": "行业应用",
+            "description": "自动驾驶、医疗、无人机等垂直领域。应用场景与落地案例。",
+            "icon": "RiRobot2Line",
+            "image": { "src": "/imgs/features/landing-page.png", "alt": "Industries" }
           }
         ]
       },
       "usage": {
         "block": "features-step",
         "id": "usage",
-        "title": "三步使用 AIShawn 极速上线",
-        "description": "只需三步，快速开启你的 AI SaaS 创业之路：",
+        "title": "如何使用本站",
+        "description": "三种方式浏览知识库：",
         "image": {
           "src": "/imgs/features/1.png",
           "alt": "usage"
@@ -199,36 +177,19 @@
         "text_align": "center",
         "items": [
           {
-            "title": "获取 AIShawn",
-            "description": "一次性购买 AIShawn，查收邮件获取代码与文档。",
-            "image": {
-              "src": "/imgs/features/5.png",
-              "alt": "usage"
-            }
+            "title": "使用知识图谱",
+            "description": "在首页点击图谱中的任意主题（VLA、VLM、基础设施、资讯、行业）即可跳转到对应文档。",
+            "image": { "src": "/imgs/features/5.png", "alt": "usage" }
           },
           {
-            "title": "启动你的项目",
-            "description": "阅读说明文档，克隆 AIShawn 代码，开始开发你的 AI SaaS 项目。",
-            "image": {
-              "src": "/imgs/features/6.png",
-              "alt": "usage"
-            }
+            "title": "浏览文档",
+            "description": "打开文档查看完整目录，或使用顶部「知识」菜单快速进入各分类。",
+            "image": { "src": "/imgs/features/6.png", "alt": "usage" }
           },
           {
-            "title": "个性化定制",
-            "description": "根据需求修改模板内容和数据，配置专属 AI 能力。",
-            "image": {
-              "src": "/imgs/features/7.png",
-              "alt": "usage"
-            }
-          },
-          {
-            "title": "部署上线",
-            "description": "简单几步将你的项目推向生产环境，立刻为客户提供服务。",
-            "image": {
-              "src": "/imgs/features/8.png",
-              "alt": "usage"
-            }
+            "title": "阅读博客",
+            "description": "在博客中查看长文、综述与算法、行业动态更新。",
+            "image": { "src": "/imgs/features/7.png", "alt": "usage" }
           }
         ],
         "className": "bg-muted"
@@ -384,20 +345,13 @@
       },
       "cta": {
         "id": "cta",
-        "title": "发布你的第一个 AI SaaS 项目",
-        "description": "从这里出发，用 AIShawn 极速交付。",
+        "title": "探索知识库",
+        "description": "按分类浏览文档，或从首页知识图谱一键进入任意主题。",
         "buttons": [
           {
-            "title": "获取 AIShawn",
-            "url": "https://aishawn.life",
-            "target": "_blank",
-            "icon": "Zap"
-          },
-          {
-            "title": "阅读文档",
+            "title": "进入文档",
             "url": "/docs",
-            "target": "_blank",
-            "variant": "outline",
+            "target": "_self",
             "icon": "BookOpenText"
           }
         ],

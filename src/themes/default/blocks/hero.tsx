@@ -14,13 +14,14 @@ import {
 } from '@/shared/components/ui/dialog';
 import { Highlighter } from '@/shared/components/ui/highlighter';
 import { cn } from '@/shared/lib/utils';
-import { Section } from '@/shared/types/blocks/landing';
+import type { Hero as HeroType, Section } from '@/shared/types/blocks/landing';
 
 import { SocialAvatars } from './social-avatars';
 import { Logos } from './logos';
 import SimplePartnerShowcase from './SimplePartnerShowcase';
 import { PartnerShowcases } from './PartnerShowcase';
 import TestimonialsSection from './TestimonialsSection';
+import { KnowledgeGraph } from './knowledge-graph';
 
 // Helper function to extract YouTube video ID from URL
 function getYouTubeVideoId(url: string): string | null {
@@ -133,9 +134,11 @@ export function Hero({
     texts = section.title?.split(highlightText, 2);
   }
 
-  // Temporary: Use local video file
+  // When knowledge_graph is set (content site), show graph instead of video
+  const heroSection = section as HeroType;
+  const hasKnowledgeGraph = !!heroSection.knowledge_graph?.nodes?.length;
   const localVideoPath = '/video/AdsGency2.mp4';
-  const hasVideo = true; // Temporarily always show video
+  const hasVideo = !hasKnowledgeGraph && true; // Temporarily always show video when no graph
   const hasImage = !!(section.image?.src || section.image_invert?.src);
 
   return (
@@ -222,7 +225,8 @@ export function Hero({
               </div>
             )}
 
-            {/* Used by 150+ businesses section */}
+            {/* Used by 150+ businesses section - hide on content site (knowledge graph) */}
+            {!hasKnowledgeGraph && (
             <div className="mt-8 flex items-center justify-center gap-3 lg:justify-start">
               <div className="relative h-12 w-12 flex-shrink-0 flex items-center">
                 <Image
@@ -240,6 +244,7 @@ export function Hero({
                 <span className="text-muted-foreground">businesses</span>
               </div>
             </div>
+            )}
 
             {section.tip && (
               <p
@@ -255,9 +260,14 @@ export function Hero({
             )}
           </div>
 
-          {/* Right Side - Video or Image */}
-          <div className="relative">
-            {hasVideo ? (
+          {/* Right Side - Knowledge Graph, Video or Image */}
+          <div className="relative flex items-center justify-center">
+            {heroSection.knowledge_graph?.nodes?.length ? (
+              <KnowledgeGraph
+                section={heroSection.knowledge_graph}
+                className="mx-auto"
+              />
+            ) : hasVideo ? (
               <>
                 <div 
                   className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden rounded-lg border border-border/50 shadow-lg cursor-pointer group flex items-center justify-center bg-muted/50"
@@ -353,16 +363,12 @@ export function Hero({
         </div>
       </div>
 
-      {/* Logos Section - Horizontal Scroll */}
-        {/* {section.logos && section.logos.items && section.logos.items.length > 0 && (
-          <div className="mt-16 border-t border-border/50 pt-12">
-            <Logos section={section.logos} />
-          </div>
-        )} */}
-      {/* <PartnerShowcases locale="en" /> */}
-      <div className="mt-16 md:mt-24">
-        <SimplePartnerShowcase locale="en" />
-      </div>
+      {/* Logos / Partner showcase: hide when hero shows knowledge graph (content site) */}
+      {!hasKnowledgeGraph && (
+        <div className="mt-16 md:mt-24">
+          <SimplePartnerShowcase locale={locale} />
+        </div>
+      )}
       {/* {section.background_image?.src && (
         <div className="absolute inset-0 -z-10 hidden h-full w-full overflow-hidden md:block">
           <div className="from-background/80 via-background/80 to-background absolute inset-0 z-10 bg-gradient-to-b" />
