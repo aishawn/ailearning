@@ -1,0 +1,28 @@
+
+一、整体脉络
+
+传统 RLHF 用的是：
+
+Proximal Policy Optimization（PPO）
+
+但 PPO 在 LLM 上有几个问题：
+
+需要 value head（训练复杂）
+
+advantage 估计不稳定
+
+KL 约束不好调
+
+大 batch 难 scale
+
+于是就出现了一系列 “PPO-free” 或 “no-value” 方法：
+
+方法	核心思想
+Reinforce++	改良版 REINFORCE
+GRPO	组内排序代替 value
+DAPO	动态 advantage
+GSPO	group soft preference 优化
+
+
+
+GSPO 之所以在 MoE 上更优，是因为它把“路径级强化”变成“分布级匹配”，大幅降低了稀疏专家结构下的梯度方差与路由崩溃风险。
