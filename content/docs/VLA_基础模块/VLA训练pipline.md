@@ -1,4 +1,4 @@
-VLA 训练整体流程
+# VLA 训练整体流程
 
 典型 VLA（Vision-Language-Action）训练 pipeline：
 

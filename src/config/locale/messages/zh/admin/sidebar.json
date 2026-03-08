@@ -54,6 +54,11 @@
               "title": "文档",
               "icon": "BookOpen",
               "url": "/admin/docs"
+            },
+            {
+              "title": "内容文件 (MD)",
+              "icon": "FilePenLine",
+              "url": "/admin/content-editor"
             }
           ]
         },

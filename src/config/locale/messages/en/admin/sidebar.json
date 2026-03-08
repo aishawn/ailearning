@@ -54,6 +54,11 @@
               "title": "Docs",
               "icon": "BookOpen",
               "url": "/admin/docs"
+            },
+            {
+              "title": "Content files (MD)",
+              "icon": "FilePenLine",
+              "url": "/admin/content-editor"
             }
           ]
         },

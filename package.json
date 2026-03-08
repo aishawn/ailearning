@@ -80,6 +80,7 @@
     "@tabler/icons-react": "^3.34.1",
     "@tanstack/react-table": "^8.21.3",
     "@types/mdx": "^2.0.13",
+    "@uiw/react-md-editor": "^4.0.11",
     "@vercel/analytics": "^1.5.0",
     "ai": "^5.0.39",
     "ai-elements": "^1.6.0",
