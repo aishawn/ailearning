@@ -1,3 +1,6 @@
+# Optional: sync images to public before push (copy runs again on deploy during pnpm build)
+# node scripts/copy-images.mjs
+
 # Commit to Git (only if there are changes)
 git add .
 $status = git status --porcelain

@@ -4,7 +4,7 @@ CVPR 2026 英伟达提出VGG-T³：将大规模3D重建提速33倍!
 
 今天我们要聊的这篇论文，来自英伟达（NVIDIA）、向量研究院（Vector Institute）和多伦多大学（University of Toronto）的研究团队，他们提出了一种名为 VGG-T 的新架构，试图彻底解决这个瓶颈。该模型的名字全称为 Visual Geometry Grounded Test Time Training，意为“将视觉几何信息植根于测试时训练”。简单来说，它不再死记硬背成千上万张图的特征，而是通过一种聪明的“压缩”方式，让重建速度实现了线性扩展。
 
-图片
+*[图片]*
 论文地址: https://arxiv.org/abs/2602.23361
 项目地址: https://research.nvidia.com/labs/dvl/projects/vgg-ttt/ （尚未发现开源地址）
 会议: CVPR 2026

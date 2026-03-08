@@ -168,8 +168,9 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "dc46f1db19b21661",
+  "active": "3cf9ff90b91c6ba5",
   "lastOpenFiles": [
+    "content/docs/VLA_世界模型/字节&港大提出WoG：告别昂贵的视频预测，让机器人学会预测'动作条件' - 副本.md",
     "content/docs/行业/1 autonomous-driving.md",
     "content/docs/RL/ELF-VLA：通过显式错误学习释放自驾VLA潜能 (CVPR'26).md",
     "public/docs-images/docs/VLA_世界模型",

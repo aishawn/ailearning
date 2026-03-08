@@ -1,10 +1,11 @@
-机器人的自我修养！斯坦福李飞飞团队等提出RTTP：具身大模型学会“三思而后行”，长程任务成功率翻倍
-图片
+﻿# 机器人的自我修养！斯坦福李飞飞团队等提出RTTP：具身大模型学会“三思而后行”，长程任务成功率翻倍
+
+*[图片]*
 在人工智能的演进历程中，具身大模型（Embodied LLMs）赋予了机器人前所未有的任务推理能力。然而，这些模型在实际部署时往往表现得像一个“静态先知”：它们能给出计划，却无法从失败中吸取教训。一旦计划出错，机器人往往会陷入同样的错误循环，而不是将失败转化为经验。
 
 为了打破这一僵局，来自斯坦福大学和美国西北大学的研究团队（包括李飞飞、吴佳俊、Yejin Choi等知名学者）共同提出了一种全新的框架——Reflective Test-Time Planning (RTTP)。该框架被命名为“RTTP”，意在强调其核心的反思（Reflective）机制，以及这种反思和规划是在测试部署阶段（Test-Time Planning）实时发生的。它让机器人能够像人类一样，在行动前“三思”，在行动后“复盘”，从而在不断的尝试与错误中实现自我进化。
 
-图片
+*[图片]*
 论文地址: https://arxiv.org/abs/2602.21198
 项目主页: https://reflective-test-time-planning.github.io
 代码仓库: https://github.com/Reflective-Test-Time-Planning/Reflective-Test-Time-Planning (已开源)
