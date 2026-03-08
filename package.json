@@ -18,9 +18,9 @@
     "ai-saas-development"
   ],
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "build:fast": "NODE_OPTIONS='--max-old-space-size=4096' next build",
+    "dev": "node scripts/copy-images.mjs && next dev --turbopack",
+    "build": "node scripts/copy-images.mjs && next build",
+    "build:fast": "node scripts/copy-images.mjs && NODE_OPTIONS='--max-old-space-size=4096' next build",
     "start": "next start",
     "lint": "eslint .",
     "format": "prettier --write .",

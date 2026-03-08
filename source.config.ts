@@ -1,4 +1,5 @@
 import { defineConfig, defineDocs } from 'fumadocs-mdx/config';
+import { visit } from 'unist-util-visit';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -16,6 +17,27 @@ export const logs = defineDocs({
   dir: 'content/logs',
 });
 
+/**
+ * Rewrite local image paths written by Obsidian (relative to content/docs)
+ * into Next.js public-folder absolute paths.
+ *
+ * Obsidian writes:  ../../images/docs/vla/arch.png
+ * Next.js serves:  /docs-images/docs/vla/arch.png
+ *
+ * Rule: any URL segment matching  (../)*images/<rest>
+ *       becomes                   /docs-images/<rest>
+ */
+function remarkRewriteImagePaths() {
+  return (tree: any) => {
+    visit(tree, 'image', (node: any) => {
+      const match = node.url.match(/(?:\.\.\/)*images\/(.+)$/);
+      if (match) {
+        node.url = `/docs-images/${match[1]}`;
+      }
+    });
+  };
+}
+
 export default defineConfig({
   mdxOptions: {
     rehypeCodeOptions: {
@@ -26,5 +48,6 @@ export default defineConfig({
       // Use defaultLanguage for unknown language codes
       defaultLanguage: 'plaintext',
     },
+    remarkPlugins: [remarkRewriteImagePaths],
   },
 });
