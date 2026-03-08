@@ -170,6 +170,10 @@
   },
   "active": "3cf9ff90b91c6ba5",
   "lastOpenFiles": [
+    "pnpm-lock.yaml.602669954",
+    "pnpm-lock.yaml.2424683604",
+    "_tmp_5144_f111121782eda308ce72414362500c37",
+    "_tmp_25552_040db4c878afa944c3505a4af062ad5c",
     "content/docs/VLA_世界模型/字节&港大提出WoG：告别昂贵的视频预测，让机器人学会预测'动作条件' - 副本.md",
     "content/docs/行业/1 autonomous-driving.md",
     "content/docs/RL/ELF-VLA：通过显式错误学习释放自驾VLA潜能 (CVPR'26).md",
@@ -180,10 +184,7 @@
     "images/docs/VLA_空间精准操作",
     "images/docs/VLA_info",
     "images/docs/VLA_世界模型",
-    "scripts/copy-images.mjs",
     "README.md",
-    "images/docs",
-    "images",
     "路由功能模块对应表.md",
     "路由分析.md"
   ]
