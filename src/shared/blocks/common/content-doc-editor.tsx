@@ -12,7 +12,7 @@ import {
 } from '@/app/actions/content-docs';
 import { Button } from '@/shared/components/ui/button';
 
-import '@uiw/react-md-editor/markdown-editor-dark.css';
+import '@uiw/react-md-editor/markdown-editor.css';
 
 const MDEditor = dynamic(() => import('@uiw/react-md-editor'), { ssr: false });
 
@@ -154,6 +154,14 @@ export function ContentDocEditor() {
             >
               {saving ? '保存中…' : '保存'}
             </Button>
+            <a
+              href={`/docs/${currentPath.replace(/\.(md|mdx)$/i, '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary underline hover:no-underline"
+            >
+              在站点中查看
+            </a>
             {dirty && <span className="text-sm text-amber-600">未保存</span>}
           </>
         )}
