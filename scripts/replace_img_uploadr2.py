@@ -182,10 +182,11 @@ def main() -> None:
     for i, (url, _) in enumerate(url_to_files.items(), 1):
         ext = get_ext_from_url(url)
         key_hash = hashlib.sha256(url.encode()).hexdigest()[:16]
-        key = f"{key_hash}{ext}"
+        # Key must include upload_path so public URL path matches R2 object key (avoids 404)
+        key = f"{upload_path}/{key_hash}{ext}"
 
         if dry_run:
-            url_to_r2[url] = build_public_url(storage_domain, upload_path, key)
+            url_to_r2[url] = build_public_url(storage_domain, "", key)
             print(f"  [{i}] would upload -> {url_to_r2[url]}")
             continue
 
@@ -198,7 +199,8 @@ def main() -> None:
                 access_key=access_key,
                 secret_key=secret_key,
             )
-            public_url = build_public_url(storage_domain, upload_path, key)
+            # key already includes upload_path, so pass path="" to avoid doubling
+            public_url = build_public_url(storage_domain, "", key)
             url_to_r2[url] = public_url
             print(f"  [{i}] uploaded -> {public_url}")
         except Exception as e:

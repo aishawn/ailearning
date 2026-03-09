@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/docs/VLA_3D/CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解.md",
+                "file": "content/docs/VLA_在线训练/HY-WU(无相)，让模型实时生成参数“换脑”.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解"
+              "title": "HY-WU(无相)，让模型实时生成参数“换脑”"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "dc46f1db19b21661",
   "lastOpenFiles": [
+    "content/docs/VLA_3D/CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解.md",
     "content/docs/VLA_部署推理/理想-只需输入芯片参数，即可免训练算出最优模型架构。同等算力下，模型智商跃升近20%.md",
     "content/docs/VLA_部署推理/端侧部署福利！具身大模型在精度、效率的平衡矛盾被Co-Design Scaling Laws解决了.md",
     "content/docs/RL/π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举.md",
@@ -189,7 +190,6 @@
     "content/docs/agent",
     "content/docs/VLA_世界模型/世界模型增强轨迹Planning的路线探讨.md",
     "content/docs/AIGC/FireRed-Image-Edit v1.1发布：OOTD元素融合、人像一致性大幅提升，社区友好拉满.md",
-    "content/docs/VLA_3D/CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解.md",
     "content/docs/VLA_世界模型/VideoWorld.md",
     "content/docs/VLA_3D",
     "content/docs/LLM/Nanbeige4.1-3B —— BOSS 直聘.md",
