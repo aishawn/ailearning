@@ -1,4 +1,4 @@
-<section id="common-tools"></section>
+
 
 ## Common Tools —— 具身智能中的常用工程工具
 
@@ -31,3 +31,9 @@
 Common Tools 并不是为了“提升指标”，而是为了**降低系统不确定性**。在具身智能中，工程可靠性本身就是一种隐含的性能。
 
 ---
+
+
+ODE trajectory  Ordinary Differential Equation
+
+
+描述一个变量如何随时间连续变化的方程。

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/docs/VLN/CVPR 2026  成功率暴涨20%！南理工EvoNav：让具身大模型告别“导航路痴”，刷新零样本导航 SOTA.md",
+                "file": "content/docs/RL/π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CVPR 2026  成功率暴涨20%！南理工EvoNav：让具身大模型告别“导航路痴”，刷新零样本导航 SOTA"
+              "title": "π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 541.5
   },
   "right": {
     "id": "3fc40f604b6d9d3e",
@@ -171,6 +171,14 @@
   },
   "active": "dc46f1db19b21661",
   "lastOpenFiles": [
+    "content/docs/VLA/commonTools.md",
+    "content/docs/RL/π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举.md",
+    "content/docs/VLA_世界模型/FRAPPE 浙大&西湖等新作：通过并行扩展对齐未来表征，刷新RoboTwin机器人操作基准.md",
+    "content/docs/VLA_世界模型/FRAPPE 浙大 × 西湖大学最新：超越π0.5，融合人类数据与世界模型的高效VLA训练框架.md",
+    "content/docs/VLM_长视频理解/LongVT.md",
+    "content/docs/Other/DeepFake.md",
+    "content/docs/VLN/CVPR 2026  成功率暴涨20%！南理工EvoNav：让具身大模型告别“导航路痴”，刷新零样本导航 SOTA.md",
+    "content/docs/Other",
     "content/docs/本地撰写与部署指南.md",
     "content/docs/编辑与管理说明.md",
     "content/docs/文章编辑管理-功能说明.md",
@@ -201,15 +209,7 @@
     "content/docs/视觉基础模型",
     "content/docs/VLA_Infra/simulators.md",
     "content/docs/VLA_基础模块/动作专家连接.md",
-    "content/docs/VLA_基础模块/VLA训练pipline.md",
     "images/docs/bf6291bd6be06b1de12c16d4881ce828.png",
-    "content/docs/AIGC",
-    "content/docs/行业分析/autonomous-driving.md",
-    "content/docs/行业分析/无人机uav.md",
-    "content/docs/行业分析/embodied-ai-healthcare.md",
-    "content/docs/Obsidian-配置与操作.md",
-    "scripts/requirements-r2.txt",
-    "content/docs/VLA_世界模型/字节&港大提出WoG：告别昂贵的视频预测，让机器人学会预测'动作条件' - 副本.md",
-    "README.md"
+    "content/docs/AIGC"
   ]
 }
