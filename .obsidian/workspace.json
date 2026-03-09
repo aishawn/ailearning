@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/docs/RL/π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举.md",
+                "file": "content/docs/VLA_3D/CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举"
+              "title": "CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解"
             }
           }
         ]
@@ -171,8 +171,10 @@
   },
   "active": "dc46f1db19b21661",
   "lastOpenFiles": [
-    "content/docs/VLA/commonTools.md",
+    "content/docs/VLA_部署推理/理想-只需输入芯片参数，即可免训练算出最优模型架构。同等算力下，模型智商跃升近20%.md",
+    "content/docs/VLA_部署推理/端侧部署福利！具身大模型在精度、效率的平衡矛盾被Co-Design Scaling Laws解决了.md",
     "content/docs/RL/π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举.md",
+    "content/docs/VLA/commonTools.md",
     "content/docs/VLA_世界模型/FRAPPE 浙大&西湖等新作：通过并行扩展对齐未来表征，刷新RoboTwin机器人操作基准.md",
     "content/docs/VLA_世界模型/FRAPPE 浙大 × 西湖大学最新：超越π0.5，融合人类数据与世界模型的高效VLA训练框架.md",
     "content/docs/VLM_长视频理解/LongVT.md",
@@ -207,8 +209,6 @@
     "content/docs/VLM/qwen3.5.md",
     "content/docs/视觉基础模型/vision-foundation-models.md",
     "content/docs/视觉基础模型",
-    "content/docs/VLA_Infra/simulators.md",
-    "content/docs/VLA_基础模块/动作专家连接.md",
     "images/docs/bf6291bd6be06b1de12c16d4881ce828.png",
     "content/docs/AIGC"
   ]
