@@ -40,6 +40,11 @@ function remarkRewriteImagePaths() {
 
 export default defineConfig({
   mdxOptions: {
+    // Disable fetching external image sizes at build time (avoids failures when
+    // remote URLs return HTML, e.g. R2 403/404 or redirects in Docker/CI).
+    remarkImageOptions: {
+      external: false,
+    },
     rehypeCodeOptions: {
       themes: {
         light: 'github-light',
