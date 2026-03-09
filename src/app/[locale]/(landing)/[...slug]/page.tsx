@@ -1,9 +1,16 @@
 import { notFound } from 'next/navigation';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 
 import { getThemePage } from '@/core/theme';
 import { envConfigs } from '@/config';
 import { getLocalPage } from '@/shared/models/post';
+
+// Check if a namespace exists in merged messages to avoid MISSING_MESSAGE from getTranslations
+function hasNamespace(messages: Record<string, unknown> | undefined, messageKey: string): boolean {
+  if (!messages || typeof messages !== 'object') return false;
+  const value = messageKey.split('.').reduce((obj: unknown, key) => (obj != null && typeof obj === 'object' ? (obj as Record<string, unknown>)[key] : undefined), messages);
+  return value != null && typeof value === 'object';
+}
 
 export const revalidate = 3600;
 
@@ -112,15 +119,12 @@ export async function generateMetadata({
     // Invalid slug, fall through to common metadata
   } else {
     const messageKey = `pages.${dynamicPageSlug}`;
-    
-    try {
+    const messages = await getMessages();
+    if (hasNamespace(messages as Record<string, unknown>, messageKey)) {
       const t = await getTranslations({ locale, namespace: messageKey });
-
-      // return dynamic page metadata
       if (t.has('metadata')) {
         title = t.raw('metadata.title');
         description = t.raw('metadata.description');
-
         return {
           title,
           description,
@@ -129,8 +133,6 @@ export async function generateMetadata({
           },
         };
       }
-    } catch (error) {
-      // Translation not found, fall through to common metadata
     }
   }
 
@@ -199,18 +201,13 @@ export default async function DynamicPage({
   }
 
   const messageKey = `pages.${dynamicPageSlug}`;
-
-  try {
+  const messages = await getMessages();
+  if (hasNamespace(messages as Record<string, unknown>, messageKey)) {
     const t = await getTranslations({ locale, namespace: messageKey });
-
-    // return dynamic page
     if (t.has('page')) {
       const Page = await getThemePage('dynamic-page');
       return <Page locale={locale} page={t.raw('page')} />;
     }
-  } catch (error) {
-    // ignore error if translation not found
-    return notFound();
   }
 
   // 3. page not found

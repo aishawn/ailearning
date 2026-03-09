@@ -84,4 +84,8 @@ export const localeMessagesPaths = [
   'pages/server-status',
   'pages/config',
   'pages/telescope/requests',
+  'pages/tos',
+  'pages/auth/login',
+  'pages/HEAD',
+  'pages/v1/guest/comm/config',
 ];

@@ -1,0 +1,2 @@
+# For replace_img_uploadr2.py: R2 upload via S3-compatible API
+boto3>=1.28.0

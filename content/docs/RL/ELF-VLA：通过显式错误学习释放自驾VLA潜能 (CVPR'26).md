@@ -5,7 +5,7 @@
 - 论文标题：Unleashing VLA Potentials in Autonomous Driving via Explicit Learning from Failures
     
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wY9PRjOpowxmfB70EicyajnnNxLTepic8sOeTnsicTU9vL5riaOdOIKda4mDo6ic9nP3SlUMo97ZTic6Owcv4mMyfOGQKbX9YybgERc3oHpicLGVO4/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=1)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/ab8ecf97838d58e1.png)
 
 ## 一、背景回顾
 
@@ -24,7 +24,7 @@
 
 ## 二、ELF-VLA算法详解
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/wY9PRjOpowzSecRoQ7v7nk7mcofpFSPqdvibwHG5F6iaLDQgvt00ukeGbGicL36kFbykRSwAnyRXU068qEG14DHGD02TZAiaC0RcOL2gn2O7R3Q/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=3)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/4c6f49840df48d44.png)
 
 在本节中，我们展示了我们提出的方法，它主要包含两个组成部分：
 
@@ -76,9 +76,9 @@
 
 **奖励建模**。为了激励VLA模型学习有效的驾驶行为并确保其输出格式的稳定性，我们设计了一个包含三个组成部分的奖励函数：PDMS奖励、格式奖励和目标奖励。强化学习过程中的整体奖励是通过整合这部分来计算的，具体如下：
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wY9PRjOpowxibuibpKaiaUnWTAic2xRLYYrngcQwibfZ5ImB4cAcD3fMaMV7W8dL6o1JmGEASzvn6xZjb3I7mI4xS8N8AI7rhLVOMmnUAtTia5CNI/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=4)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/a1233d4359d19a56.png)
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wY9PRjOpowzb1wnYLMBVPOMxLVO3Dsc5dInib3MzY1vmaCoOribrdEuz3qekRVNBX6uYEtpwyDJXswVDxY00ztbvcZRiatn3nsvgBQbJ6Ewlz4/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=5)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/54e5984920e43b1e.png)
 
 **带反馈的GRPO**。 我们的方法采用了一种反馈机制来优化轨迹并增强奖励，从而使VLA模型能够超越其性能瓶颈。更具体地说，该过程首先使用基础输入采样一批轨迹响应。然后计算该批次对应的奖励 ，其中包括 、和。基于预定义的阈值，这些响应然后被分为两组：正确的响应  和错误的响应 。最后，遵循第3.1节的过程，对正确和错误的响应进行相应的处理，然后组合以创建最终的反馈输入 。
 
@@ -106,11 +106,11 @@ Navsim Benchmark：我们使用NAVSIMv1的PDMS和NAVSIMv2的EPDMS作为闭环规
 
 表 1 展示了 ELF-VLA 与当前领先方法在 NAVSIMv1 基准测试上的性能比较。在纯视觉（vision-only）设置下，ELF-VLA 获得了 91.0 的 PDMS，确立了新的最先进水平（SOTA）。这一结果表明，与之前最好的纯视觉方法 DriveVLA 相比，其 PDMS 取得了 0.7 的显著提升。此外，ELF-VLA 分别以 3.6 和 2.0 的 PDMS 优势超越了仅使用监督微调（SFT-only，InternVL3-8B-SFT）和传统强化学习（traditional RL，InternVL3-8B-RL）的baseline模型。
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wY9PRjOpowyh4KxFOMlS9nOz0b4AkESDLp8yzsvBpenGCNMTXzAawwNdBGBgpuY0Z32wLTjxrEv3CImm2npnDYl5308I5OW49ib7TrFpTpFA/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=6)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/278f1ffc6908173e.png)
 
 在 NAVSIMv2 基准测试（表2）中，ELF-VLA 延续了其强劲的表现，以 87.1 的 EPDMS 创下了新的 SOTA。这一得分比之前由 DriveVLA-W0 创下的最佳成绩高出了 1.0 个 EPDMS。这些发现表明，与传统的强化学习方法相比，我们的方法 ELF-VLA 显著增强了模型的自动驾驶能力，特别是在应对具有挑战性的复杂驾驶场景时。此外，在两个基准测试中的出色表现证实，ELF-VLA 并非仅仅是对 PDMS 指标的过拟合；相反，它在截然不同且更为全面的 EPDMS 指标上同样表现优异，展现出了强大的泛化能力。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/wY9PRjOpowz7k0WN0nBicbsz3EKPS3QvAzyjmzDiculC5s0tjJlk2iafzNx0183EYMzk4Hia7CUEWj7atav6oKHPQg2Aw4FuY5MFkcFfAKoSZhA/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=7)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/9325e5be0dbe2899.png)
 
 **定量评估**。 我们将 ELF-VLA（表 3）的性能与几种精心设计的消融模型进行了比：
 
@@ -125,31 +125,31 @@ Navsim Benchmark：我们使用NAVSIMv1的PDMS和NAVSIMv2的EPDMS作为闭环规
 - ELF-VLA：SFT模型基于一个包含新的、改进的响应集进行微调，这些响应集是根据我们教师模型的结构化反馈重新生成的。
     
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/wY9PRjOpowwicfBSJGicjzQycRPiblZPmHbusUPgUtcvKDrngkKjXnVia5YxE9plOicicknemEkw8n3x2tsTbQmlqOicaOhoOA4tyGsTsLp6GORSBM/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=8)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/3514d98c73502703.png)
 
 值得注意的是，ELF-VLA 实现了最佳的整体性能。我们的方法比传统的GRPO方法高出 2.0 PDMS。这表明，通过引入结构化反馈和重新生成更好的分布内的轨迹，我们的方法解决了持续性失败问题。此外，ELF-VLA 分别超过了 GT-GRPO 和 Rule-GRPO 1.8 和 1.4 PDMS。这凸显了这两个baseline的明显局限性。对于 GT-GRPO，GT 轨迹表现出与原始 VLA 生成的响应有显著的分布偏移。这些低概率性的GT响应使得优化变得困难。对于 Rule-GRPO，预定义规则的反馈对模型的影响有限。这个过程类似于简单的自我修正，缺乏细粒度的指导，导致模型无法从如此简单的反馈中学习到有效的轨迹校正。相反，ELF-VLA 利用教师模型广泛的通用知识对原始响应进行深入的结构化分析。VLA 模型接收这种全面的反馈，使其能够从错误中学习并微调轨迹。这个过程产生了一个卓越的、更容易优化的微调轨迹。
 
 **总失败率分析**。 我们分析了这些模型在强化学习训练阶段的失败率，如图 4 所示。具体来说，我们测量了所有展开轨迹在以下关键指标上同时失败的样本比例：PDMS、DAC 和 NC。如图所示，虽然像 GT-GRPO 和 Rule-GRPO 这样的中间策略有助于降低失败率，但 ELF-VLA 在所有指标上都展现了最显著的改善。ELF-VLA 将总失败的 PDMS 发生率从 2.73%（对于 GRPO）降低到仅 1.08%，在 NC 和 DAC 上也观察到了同样明显的降低。这一结果进一步验证了我们的方法使模型能够从错误中学习，解决持续失败的问题，并最终提高整体的驾驶安全性和鲁棒性。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/wY9PRjOpowyDWxnA7Jicfo5MtnLicZibSz6U9QIgxxcjYVewkccaz2F4fBJTTgV0JiaV6vNTIzunrOS7emsNj5fCWtnJaLzjTQhefg3ic5OsVzZE/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=9)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/8a713a9d330b733b.png)
 
 **Meta Action评估**。 如表4所示，我们的结果突显了ELF-VLA在高层规划方面的显著优势。ELF-VLA在纵向速度精度和横向路径精度方面均取得了最佳结果，整体规划精度高达80.3%，比传统的GRPO高出1.0%。此外，与开源模型相比，ELF-VLA的精度比规模更大的Qwen2.5-VL-72B模型高出51.6%。这一改进源于教师模型提供了修正的meta action，VLA模型学习并内化了这些meta action。这表明ELF-VLA能够从失败案例中学习，从而改进其高层规划策略。 4.3. 消融实验
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/wY9PRjOpowySn70iaZLUy3MF1XSO1KS3UmetuPkicPxO29e55j94MS9N26ib0jzWY1pSEdD931neRTNqZ4IJSP8ibPtibJhu6Fy2ZFx8fvZja12A/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=10)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/b044457898fe4be7.png)
 
 **训练数据消融**。 如表 5 所示，我们研究了训练数据量和组成对强化学习 (RL) 的影响。使用完整的 85k 数据集（89.1 PDMS）或随机抽取的 24k 子集（88.9 PDMS）均未获得最优结果。相比之下，我们根据第 3.3 节的指导精心整理的 24k 数据集 (24k*) 取得了 91.0 PDMS 的最佳性能。这表明完整的 85k 数据集主要由简单的场景组成，提供的学习信号有限，从而削弱了整体梯度信号，导致策略更新效率低下，主要集中在已掌握的场景上。我们的整理策略有效地提炼了最有价值的数据。结合我们的反馈机制，这些数据可以针对这些复杂场景进行有针对性的训练。这种方法最终提高了模型性能，并增强了训练效率。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/wY9PRjOpowzHwC6tcXic9pe72NAG5CaKHrT4PdrAsT1ictACfXqu0MHtrwPgSAz01dEE9jOGKYhxRCZxkLiaoBAVM6KGM25W2NNA4iaBucKbUn8/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=11)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/6db52cdb10498a92.png)
 
 **反馈数量消融**。 表 6 分析了我们的反馈组件。我们首先改变修正响应的数量 。在  时实现了最佳性能 (91.0 PDMS)。增加会降低性能，在  时降至89.0。这表明虽然单个有针对性的细化是有效的，但多个基于反馈的响应可能会分散策略的注意力。我们还评估了Policy shaping (PS)的效果。移除PS（在  时）导致 PDMS 显著下降1.7%，从91.0降至89.3。这证实了PS对于防止训练崩溃和格式错误至关重要，确保模型能够从高优势、低概率的细化轨迹中正确学习。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_png/wY9PRjOpowzO3aHlO5icxDet6CjfYruIrsqYHC5WSo68sR700Dz0e3ibvib0EDlMmnmbn0cibwiaCjx02ZveG1M3ZViaZ4wJeiccmAylziaF9eWZfiaI/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=12)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/96a5b4e5a42fc374.png)
 
 ### 细化过程的可视化
 
 图 5 展示了一个定性示例，其中 ELF-VLA 在复杂的左转场景中纠正了错误的轨迹。最初的错误轨迹（红色曲线）导致了潜在的碰撞，其根源在于对关键障碍物的严重错误估计（预测：前方 15.57 米，左侧 8.11 米）。我们的教师模型提供了结构化反馈，准确识别了这个“思维过程”错误，并估计了更准确的位置（前方 11.43 米，左侧 4.11 米）。同时，它提供了可操作的更正，例如对目标横向位置和纵向速度的调整。基于此反馈，模型生成了修正后的轨迹（蓝色曲线）。修正方案中相应的“关键障碍物分析”反映了这种修正的感知，使智能体能够规划一条成功避开障碍物的更安全轨迹。
 
-![图片](https://mmbiz.qpic.cn/mmbiz_jpg/wY9PRjOpowwzvAbBiaO4ZdictHibSVHliaDiaN57o3FDVyd6qOCp2vPIbGUeGk31K100XTrET6RtYqLamibAvaje5OqDEicCcUZT4xf593RWUpm8Pg/640?wx_fmt=jpeg&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=13)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/3a46c2ad1fe8f971.jpeg)
 
 ## 结论
 

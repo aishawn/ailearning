@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/docs/RL/ELF-VLA：通过显式错误学习释放自驾VLA潜能 (CVPR'26).md",
+                "file": "content/docs/VLN/CVPR 2026  成功率暴涨20%！南理工EvoNav：让具身大模型告别“导航路痴”，刷新零样本导航 SOTA.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ELF-VLA：通过显式错误学习释放自驾VLA潜能 (CVPR'26)"
+              "title": "CVPR 2026  成功率暴涨20%！南理工EvoNav：让具身大模型告别“导航路痴”，刷新零样本导航 SOTA"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "siglip",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -160,6 +160,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:新建数据库": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -168,24 +169,47 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3cf9ff90b91c6ba5",
+  "active": "dc46f1db19b21661",
   "lastOpenFiles": [
-    "pnpm-lock.yaml.602669954",
-    "pnpm-lock.yaml.2424683604",
-    "_tmp_5144_f111121782eda308ce72414362500c37",
-    "_tmp_25552_040db4c878afa944c3505a4af062ad5c",
-    "content/docs/VLA_世界模型/字节&港大提出WoG：告别昂贵的视频预测，让机器人学会预测'动作条件' - 副本.md",
-    "content/docs/行业/1 autonomous-driving.md",
+    "content/docs/本地撰写与部署指南.md",
+    "content/docs/编辑与管理说明.md",
+    "content/docs/文章编辑管理-功能说明.md",
+    "content/docs/agent/自动优化agent-autosearch.md",
+    "content/docs/VLA_在线训练/HY-WU(无相)，让模型实时生成参数“换脑”.md",
+    "content/docs/agent",
+    "content/docs/VLA_世界模型/世界模型增强轨迹Planning的路线探讨.md",
+    "content/docs/AIGC/FireRed-Image-Edit v1.1发布：OOTD元素融合、人像一致性大幅提升，社区友好拉满.md",
+    "content/docs/VLA_3D/CVPR 2026 新国立提出 EmbodiedSplat：首个在线前馈语义 3DGS，5FPS 搞定全场景 3D 理解.md",
+    "content/docs/VLA_世界模型/VideoWorld.md",
+    "content/docs/VLA_3D",
+    "content/docs/LLM/Nanbeige4.1-3B —— BOSS 直聘.md",
     "content/docs/RL/ELF-VLA：通过显式错误学习释放自驾VLA潜能 (CVPR'26).md",
-    "public/docs-images/docs/VLA_世界模型",
-    "public/docs-images/docs/VLA_空间精准操作",
-    "public/docs-images/docs/VLA_info",
-    "public/docs-images/docs",
-    "images/docs/VLA_空间精准操作",
-    "images/docs/VLA_info",
-    "images/docs/VLA_世界模型",
-    "README.md",
-    "路由功能模块对应表.md",
-    "路由分析.md"
+    "test_upload.py",
+    "test_r2_recent.py",
+    "test_r2_specific.py",
+    "test_r2.py",
+    "images/docs/dc3be508436b5c7b758cf95c57de8664.png",
+    "images/docs/b7e1431c1228add0ad7be3236ed8ad00.png",
+    "images/docs/8926f583d33370c1001e607c04b641e0.png",
+    "content/docs/LLM",
+    "content/docs/RL/实践经验.md",
+    "content/docs/RL/GRPO、DAPO、Reinforce++、GSPO比较.md",
+    "content/docs/VLM/qwen3-vl.md",
+    "content/docs/VLM/qwen2-vl.md",
+    "content/docs/VLM/qwen3.5.md",
+    "content/docs/视觉基础模型/vision-foundation-models.md",
+    "content/docs/视觉基础模型",
+    "content/docs/VLA_Infra/simulators.md",
+    "content/docs/VLA_基础模块/动作专家连接.md",
+    "content/docs/VLA_基础模块/VLA训练pipline.md",
+    "images/docs/bf6291bd6be06b1de12c16d4881ce828.png",
+    "content/docs/AIGC",
+    "content/docs/行业分析/autonomous-driving.md",
+    "content/docs/行业分析/无人机uav.md",
+    "content/docs/行业分析/embodied-ai-healthcare.md",
+    "content/docs/Obsidian-配置与操作.md",
+    "scripts/requirements-r2.txt",
+    "content/docs/VLA_世界模型/字节&港大提出WoG：告别昂贵的视频预测，让机器人学会预测'动作条件' - 副本.md",
+    "README.md"
   ]
 }
