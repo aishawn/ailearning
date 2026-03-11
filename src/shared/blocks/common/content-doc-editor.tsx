@@ -129,7 +129,7 @@ export function ContentDocEditor() {
           onChange={(e) => setCurrentPath(e.target.value)}
           disabled={loading}
         >
-          <option value="">-- 选择 content/docs 下的 .md/.mdx 文件 --</option>
+          <option value="">-- 选择 content/vla 下的 .md/.mdx 文件 --</option>
           {list.map(({ path: p, label }) => (
             <option key={p} value={p}>
               {label}
@@ -191,7 +191,7 @@ export function ContentDocEditor() {
       )}
 
       {!currentPath && !loading && list.length === 0 && (
-        <p className="text-sm text-muted-foreground">未找到 content/docs 下的 .md/.mdx 文件。</p>
+        <p className="text-sm text-muted-foreground">未找到 content/vla 下的 .md/.mdx 文件。</p>
       )}
     </div>
   );

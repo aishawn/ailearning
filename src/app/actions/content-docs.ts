@@ -3,7 +3,7 @@
 import { readdir, readFile, writeFile } from 'fs/promises';
 import path from 'path';
 
-const CONTENT_DOCS = 'content/docs';
+const CONTENT_DOCS = 'content/vla';
 
 function resolveDocPath(relativePath: string): string {
   // Normalize to avoid path escape; support both / and \ for cross-platform
@@ -18,7 +18,7 @@ function resolveDocPath(relativePath: string): string {
   return resolved;
 }
 
-/** List all .md/.mdx files under content/docs (relative paths) */
+/** List all .md/.mdx files under content/vla (relative paths) */
 export async function getContentDocList(): Promise<{ path: string; label: string }[]> {
   const base = path.join(process.cwd(), CONTENT_DOCS);
   const entries: { path: string; label: string }[] = [];

@@ -27,7 +27,7 @@ export default async function ContentEditorPage({
         ]}
       />
       <Main>
-        <MainHeader title="编辑 content/docs 下的 Markdown 文件" />
+        <MainHeader title="编辑 content/vla 下的 Markdown 文件" />
         <div className="rounded-lg border bg-card p-4">
           <ContentDocEditor />
         </div>

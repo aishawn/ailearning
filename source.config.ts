@@ -2,7 +2,7 @@ import { defineConfig, defineDocs } from 'fumadocs-mdx/config';
 import { visit } from 'unist-util-visit';
 
 export const docs = defineDocs({
-  dir: 'content/docs',
+  dir: 'content/vla',
 });
 
 export const pages = defineDocs({
@@ -22,7 +22,7 @@ export const vlm = defineDocs({
 });
 
 /**
- * Rewrite local image paths written by Obsidian (relative to content/docs)
+ * Rewrite local image paths written by Obsidian (relative to content/vla)
  * into Next.js public-folder absolute paths.
  *
  * Obsidian writes:  ../../images/docs/vla/arch.png
