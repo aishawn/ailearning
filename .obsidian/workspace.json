@@ -11,10 +11,14 @@
             "id": "dc46f1db19b21661",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/vla/VLA_控制&工程/仿真器simulators.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "仿真器simulators"
             }
           }
         ]
@@ -165,8 +169,23 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "3cf9ff90b91c6ba5",
+  "active": "dc46f1db19b21661",
   "lastOpenFiles": [
+    "content/vla/VLA_控制&工程/control.md",
+    "content/vla/VLA_控制&工程/hardware.md",
+    "content/vla/VLA_控制&工程/仿真器simulators.md",
+    "content/vla/行业分析/company.md",
+    "content/vla/VLA_DATA/benchmark.md",
+    "content/vla/VLA_控制&工程/ROS2操作系统.md",
+    "content/vla/VLA_RL/概述.md",
+    "content/vla/VLA_RL/π-StepNFT 发布：专为 Flow-based VLA 打造，在线 RL 微调从此「轻」而易举.md",
+    "content/vla/VLA_RL/ELF-VLA：通过显式错误学习释放自驾VLA潜能 (CVPR'26).md",
+    "content/vlm/RL/BandPO Bridging Trust Regions and Ratio Clipping via Probability-Aware Bounds for LLM Reinforcement Learning。.md",
+    "content/vla/VLA_基础模块/动作专家.md",
+    "content/vla/VLA_RL",
+    "content/vla/VLA_基础模块/llm-for-robotics.md",
+    "content/vla/VLA_基础模块/VLA训练pipline.md",
+    "content/docs/README-文档与多目录说明.md",
     "src/app/[locale]/(growth-hacking)",
     "content/grow/index.mdx",
     "src/app/[locale]/(grow)/grow/[[...slug]]/page.tsx",
@@ -186,23 +205,8 @@
     "content/grow/FastGrowWebAPP/2025-03.md",
     "content/grow/FastGrowWebAPP/2025-02.md",
     "content/grow/FastGrowWebAPP/2025-01.md",
-    "content/grow/FastGrowTrick/骚操作.md",
-    "content/grow/FastGrowTrick/血祭搜魂术.md",
-    "content/grow/FastGrowTrick/社群介绍.md",
-    "content/grow/FastGrowTrick/无限投放.md",
-    "content/grow/FastGrowTrick/接火之术.md",
-    "content/grow/FastGrowTrick/接力棒.md",
-    "content/grow/FastGrowTrick/截流之术.md",
-    "content/grow/FastGrowTrick/商标之术.md",
-    "content/grow/FastGrowTrick/免费之术.md",
-    "content/grow/FastGrowTrick/借风之术.md",
-    "content/grow/FastGrowTrick/借词之术-广告借词.md",
-    "content/grow/FastGrowTrick/借火之术.md",
-    "content/grow/FastGrowTrick/借新之术.md",
     "content/grow/FastGrowWebAPP",
     "content/grow/FastGrowTrick",
-    "content/grow",
-    "content/webapp/FastGrowTrick",
     "public/docs-images/docs/dc3be508436b5c7b758cf95c57de8664.png",
     "public/docs-images/docs/bf6291bd6be06b1de12c16d4881ce828.png",
     "public/docs-images/docs/b7e1431c1228add0ad7be3236ed8ad00.png",
