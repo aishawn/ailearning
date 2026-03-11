@@ -1,14 +1,10 @@
 {
   "page": {
-    "show_sections": [
-      "hero",
-      "benefits",
-      "usage",
-      "cta"
-    ],
+    "show_sections": ["hero", "benefits", "usage", "cta"],
     "sections": {
       "hero": {
         "id": "hero",
+        "label": "研究中心",
         "title": "AI 算法与资讯",
         "highlight_text": "AI",
         "description": "视觉-语言与具身智能：算法、研究与行业应用。",
@@ -33,9 +29,24 @@
         "knowledge_graph": {
           "title": "知识模块",
           "nodes": [
-            { "id": "vlm", "title": "VLM", "url": "/vla/VLM", "description": "视觉语言模型" },
-            { "id": "vla", "title": "VLA", "url": "/vla/VLA", "description": "视觉-语言-动作与具身智能" },
-            { "id": "aigc", "title": "AIGC", "url": "/aigc", "description": "生成式 AI 与内容创作" }
+            {
+              "id": "vlm",
+              "title": "VLM",
+              "url": "/vla/VLM",
+              "description": "视觉语言模型"
+            },
+            {
+              "id": "vla",
+              "title": "VLA",
+              "url": "/vla/VLA",
+              "description": "视觉-语言-动作与具身智能"
+            },
+            {
+              "id": "aigc",
+              "title": "AIGC",
+              "url": "/aigc",
+              "description": "生成式 AI 与内容创作"
+            }
           ]
         }
       },
@@ -146,19 +157,28 @@
             "title": "VLM",
             "description": "视觉语言模型：多模态理解与生成，从基础模型到领域应用。",
             "icon": "RiClapperboardAiLine",
-            "image": { "src": "/imgs/features/admin-settings.png", "alt": "VLM" }
+            "image": {
+              "src": "/imgs/features/admin-settings.png",
+              "alt": "VLM"
+            }
           },
           {
             "title": "基础设施与基准",
             "description": "仿真器、数据集、硬件与评估。可复现研究与部署工具。",
             "icon": "RiCodeFill",
-            "image": { "src": "/imgs/features/landing-page.png", "alt": "Infra" }
+            "image": {
+              "src": "/imgs/features/landing-page.png",
+              "alt": "Infra"
+            }
           },
           {
             "title": "行业应用",
             "description": "自动驾驶、医疗、无人机等垂直领域。应用场景与落地案例。",
             "icon": "RiRobot2Line",
-            "image": { "src": "/imgs/features/landing-page.png", "alt": "Industries" }
+            "image": {
+              "src": "/imgs/features/landing-page.png",
+              "alt": "Industries"
+            }
           }
         ]
       },

@@ -25,8 +25,8 @@ export const aigc = defineDocs({
   dir: 'content/aigc',
 });
 
-export const grow = defineDocs({
-  dir: 'content/grow',
+export const growthHacking = defineDocs({
+  dir: 'content/growth-hacking',
 });
 
 /**

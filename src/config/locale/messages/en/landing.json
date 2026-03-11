@@ -14,22 +14,17 @@
     "nav": {
       "items": [
         {
-          "title": "Docs",
-          "url": "/vla"
-        },
-        {
           "title": "Knowledge",
           "children": [
-            { "title": "VLA", "url": "/vla/VLA" },
-            { "title": "VLM", "url": "/vla/VLM" },
-            { "title": "VLA Infra", "url": "/vla/VLA_Infra" },
-            { "title": "VLA News", "url": "/vla/VLA_info" },
-            { "title": "Industries", "url": "/vla/行业" }
+            { "title": "VLA", "url": "/vla" },
+            { "title": "VLM", "url": "/vla" },
+            { "title": "AIGC", "url": "/aigc" }
           ]
         },
         {
           "title": "Resources",
           "children": [
+            { "title": "growth-hacking", "url": "/growth-hacking" },
             { "title": "Blog", "url": "/blog" },
             { "title": "Careers", "url": "/careers" }
           ]
@@ -38,11 +33,11 @@
           "title": "Tools",
           "children": [
             {
-              "title": "trending",
+              "title": "x-trending",
               "url": "/x-trending"
             },
             {
-              "title": "competitor-analysis",
+              "title": "x-competitor-analysis",
               "url": "/competitor-analysis"
             },
             {

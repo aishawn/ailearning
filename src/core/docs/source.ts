@@ -1,6 +1,6 @@
 // .source folder will be generated when you run `next dev`
 import { createElement } from 'react';
-import { aigc, docs, grow, logs, pages, posts, vlm } from '@/.source';
+import { aigc, docs, growthHacking, logs, pages, posts, vlm } from '@/.source';
 import type { I18nConfig } from 'fumadocs-core/i18n';
 import { loader } from 'fumadocs-core/source';
 import { icons } from 'lucide-react';
@@ -66,10 +66,10 @@ export const aigcSource = loader({
   icon: iconHelper,
 });
 
-// Grow source (independent section at /grow)
-export const growSource = loader({
-  baseUrl: '/grow',
-  source: grow.toFumadocsSource(),
+// Growth Hacking source (independent section at /growth-hacking)
+export const growthHackingSource = loader({
+  baseUrl: '/growth-hacking',
+  source: growthHacking.toFumadocsSource(),
   i18n,
   icon: iconHelper,
 });

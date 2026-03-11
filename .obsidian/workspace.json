@@ -167,6 +167,7 @@
   },
   "active": "3cf9ff90b91c6ba5",
   "lastOpenFiles": [
+    "src/app/[locale]/(growth-hacking)",
     "content/grow/index.mdx",
     "src/app/[locale]/(grow)/grow/[[...slug]]/page.tsx",
     "src/app/[locale]/(grow)/grow/[[...slug]]",
@@ -202,7 +203,6 @@
     "content/grow/FastGrowTrick",
     "content/grow",
     "content/webapp/FastGrowTrick",
-    "content/webapp/FastGrowWebAPP",
     "public/docs-images/docs/dc3be508436b5c7b758cf95c57de8664.png",
     "public/docs-images/docs/bf6291bd6be06b1de12c16d4881ce828.png",
     "public/docs-images/docs/b7e1431c1228add0ad7be3236ed8ad00.png",

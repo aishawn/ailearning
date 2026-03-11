@@ -4,6 +4,7 @@
     "sections": {
       "hero": {
         "id": "hero",
+        "label": "Research Hub",
         "title": "AI Algorithms & News",
         "highlight_text": "AI",
         "description": "Vision-language and embodied AI: algorithms, research, and industry applications.",
@@ -29,9 +30,24 @@
         "knowledge_graph": {
           "title": "Topics",
           "nodes": [
-            { "id": "vlm", "title": "VLM", "url": "/vla/VLM", "description": "Vision-Language Models" },
-            { "id": "vla", "title": "VLA", "url": "/vla/VLA", "description": "Vision-Language-Action & embodied AI" },
-            { "id": "aigc", "title": "AIGC", "url": "/aigc", "description": "Generative AI & content creation" }
+            {
+              "id": "vlm",
+              "title": "VLM",
+              "url": "/vla/VLM",
+              "description": "Vision-Language Models"
+            },
+            {
+              "id": "vla",
+              "title": "VLA",
+              "url": "/vla/VLA",
+              "description": "Vision-Language-Action & embodied AI"
+            },
+            {
+              "id": "aigc",
+              "title": "AIGC",
+              "url": "/aigc",
+              "description": "Generative AI & content creation"
+            }
           ]
         }
       },

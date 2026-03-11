@@ -3,7 +3,7 @@ import type { Translations } from 'fumadocs-ui/i18n';
 import { DocsLayout } from 'fumadocs-ui/layouts/notebook';
 import { RootProvider } from 'fumadocs-ui/provider';
 
-import { growSource } from '@/core/docs/source';
+import { growthHackingSource } from '@/core/docs/source';
 
 import { baseOptions } from '../(docs)/layout.config';
 
@@ -18,7 +18,7 @@ const locales = [
   { name: '简体中文', locale: 'zh' },
 ];
 
-export default async function GrowRootLayout({
+export default async function GrowthHackingRootLayout({
   children,
   params,
 }: {
@@ -38,7 +38,7 @@ export default async function GrowRootLayout({
     >
       <DocsLayout
         {...baseOptions(lang)}
-        tree={growSource.pageTree[lang]}
+        tree={growthHackingSource.pageTree[lang]}
         nav={{ ...baseOptions(lang).nav, mode: 'top' }}
         sidebar={{ tabs: [] }}
         tabMode="sidebar"

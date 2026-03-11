@@ -143,112 +143,176 @@ export function Hero({
     <section
       id={section.id}
       className={cn(
-        `pt-24 pb-8 md:pt-36 md:pb-16`,
+        'relative flex flex-col',
+        // fill viewport minus navbar (~64px), center content vertically
+        'min-h-[calc(100vh-64px)]',
         section.className,
         className
       )}
     >
-      {section.announcement && (
-        <Link
-          href={section.announcement.url || ''}
-          target={section.announcement.target || '_self'}
-          className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto mb-8 flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-        >
-          <span className="text-foreground text-sm">
-            {section.announcement.title}
-          </span>
-          <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
+      {/* ── Background: radial glow + subtle grid ── */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        {/* primary glow — right side, aligned with cards */}
+        <div className="absolute right-[-10%] top-[-5%] h-[600px] w-[600px] rounded-full bg-violet-600/10 blur-[120px]" />
+        {/* secondary glow — bottom left */}
+        <div className="absolute left-[-5%] bottom-[10%] h-[400px] w-[400px] rounded-full bg-sky-600/8 blur-[100px]" />
+        {/* subtle dot grid */}
+        <div
+          className="absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage: 'radial-gradient(circle, currentColor 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
+      </div>
 
-          <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-            <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-              <span className="flex size-6">
-                <ArrowRight className="m-auto size-3" />
-              </span>
-              <span className="flex size-6">
-                <ArrowRight className="m-auto size-3" />
-              </span>
+      {/* ── Announcement banner ── */}
+      {section.announcement && (
+        <div className="relative z-10 flex justify-center pt-6">
+          <Link
+            href={section.announcement.url || ''}
+            target={section.announcement.target || '_self'}
+            className="hover:bg-background dark:hover:border-t-border bg-muted group flex w-fit items-center gap-3 rounded-full border p-1 pl-4 shadow-sm transition-colors duration-300"
+          >
+            <span className="text-foreground text-sm">{section.announcement.title}</span>
+            <span className="block h-4 w-px bg-border" />
+            <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
+              <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                <span className="flex size-6"><ArrowRight className="m-auto size-3" /></span>
+                <span className="flex size-6"><ArrowRight className="m-auto size-3" /></span>
+              </div>
             </div>
-          </div>
-        </Link>
+          </Link>
+        </div>
       )}
 
-      {/* Hero Content - Left/Right Layout: 简洁、专业；右侧 VLM / VLA / AIGC 三模块 */}
-      <div className="container mx-auto px-4 mb-16 md:mb-24 max-w-6xl">
-        <div className="grid gap-10 lg:grid-cols-[1fr_340px] lg:items-center lg:gap-16">
-          {/* Left - 简洁标题与描述 */}
-          <div className="text-center lg:text-left">
-            {texts && texts.length > 0 ? (
-              <h1 className="text-foreground text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
-                {texts[0]}
-                <Highlighter action="underline" color="#6366F1">
-                  {highlightText}
-                </Highlighter>
-                {texts[1]}
-              </h1>
-            ) : (
-              <h1 className="text-foreground text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
-                {section.title}
-              </h1>
-            )}
+      {/* ── Hero body — vertically centered ── */}
+      <div className="relative z-10 flex flex-1 items-center">
+        <div className="mx-auto w-full max-w-5xl px-6 py-16 lg:py-0">
+          <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-20">
 
-            <p
-              className="text-muted-foreground mt-4 mb-6 text-base text-balance max-w-xl mx-auto lg:mx-0"
-              dangerouslySetInnerHTML={{ __html: section.description ?? '' }}
-            />
-
-            {section.buttons && section.buttons.length > 0 && (
-              <div className="flex items-center justify-center gap-3 lg:justify-start">
-                {section.buttons.slice(0, 1).map((button, idx) => (
-                  <Button
-                    asChild
-                    size="default"
-                    variant="outline"
-                    className="rounded-md border-foreground/20 bg-background text-foreground hover:bg-muted"
-                    key={idx}
-                  >
-                    <Link href={button.url ?? ''} target={button.target ?? '_self'} className="inline-flex items-center gap-2">
-                      {button.title}
-                      <SmartIcon name="ArrowRight" className="size-4" />
-                    </Link>
-                  </Button>
-                ))}
+            {/* ── LEFT ── */}
+            <div className="flex-1 min-w-0 text-center lg:text-left">
+              {/* overline label */}
+              <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-border/40 bg-muted/40 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                <span className="size-1.5 rounded-full bg-violet-400" />
+                {(heroSection as any).label || 'Research Hub'}
               </div>
-            )}
 
-            {section.tip && (
+              {/* headline */}
+              {texts && texts.length > 0 ? (
+                <h1 className="text-foreground text-[2.75rem] font-bold tracking-tight leading-[1.12] text-balance sm:text-[3.25rem] lg:text-[3.5rem]">
+                  {texts[0]}
+                  <Highlighter action="underline" color="#6366F1">
+                    {highlightText}
+                  </Highlighter>
+                  {texts[1]}
+                </h1>
+              ) : (
+                <h1 className="text-foreground text-[2.75rem] font-bold tracking-tight leading-[1.12] text-balance sm:text-[3.25rem] lg:text-[3.5rem]">
+                  {section.title}
+                </h1>
+              )}
+
+              {/* description */}
               <p
-                className="text-muted-foreground mt-4 block text-sm"
-                dangerouslySetInnerHTML={{ __html: section.tip ?? '' }}
+                className="text-muted-foreground mt-5 mb-8 text-base leading-relaxed max-w-sm mx-auto lg:mx-0"
+                dangerouslySetInnerHTML={{ __html: section.description ?? '' }}
               />
-            )}
 
-            {section.show_avatars && (
-              <div className="mt-6 flex justify-center lg:justify-start">
-                <SocialAvatars tip={section.avatars_tip || ''} />
-              </div>
-            )}
-          </div>
+              {/* CTA */}
+              {section.buttons && section.buttons.length > 0 && (
+                <div className="flex items-center justify-center gap-3 lg:justify-start">
+                  {section.buttons.slice(0, 1).map((button, idx) => (
+                    <Button
+                      asChild
+                      size="default"
+                      key={idx}
+                      className="h-10 rounded-lg px-5 text-sm font-semibold bg-foreground text-background hover:bg-foreground/90"
+                    >
+                      <Link href={button.url ?? ''} target={button.target ?? '_self'} className="inline-flex items-center gap-2">
+                        {button.title}
+                        <SmartIcon name="ArrowRight" className="size-3.5" />
+                      </Link>
+                    </Button>
+                  ))}
+                </div>
+              )}
 
-          {/* Right - 三模块：VLM、VLA、AIGC */}
-          <div className="relative flex flex-col gap-3">
-            {heroSection.knowledge_graph?.nodes?.length ? (
-              <nav className="grid gap-3" aria-label={heroSection.knowledge_graph.title ?? 'Topics'}>
-                {heroSection.knowledge_graph.nodes.slice(0, 3).map((node) => (
-                  <Link
-                    key={node.id ?? node.url}
-                    href={node.url}
-                    className={cn(
-                      'group flex items-center gap-4 rounded-lg border border-border/60 bg-card px-4 py-3.5 text-left',
-                      'hover:border-primary/40 hover:bg-muted/50 transition-colors duration-200 no-underline'
-                    )}
-                  >
-                    <span className="text-sm font-semibold text-foreground shrink-0 w-14">{node.title}</span>
-                    <span className="text-muted-foreground text-sm flex-1 line-clamp-1">{node.description}</span>
-                    <SmartIcon name="ArrowRight" className="size-4 shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
-                  </Link>
-                ))}
-              </nav>
-            ) : hasVideo ? (
+              {section.tip && (
+                <p
+                  className="text-muted-foreground mt-5 block text-xs"
+                  dangerouslySetInnerHTML={{ __html: section.tip ?? '' }}
+                />
+              )}
+
+              {section.show_avatars && (
+                <div className="mt-6 flex justify-center lg:justify-start">
+                  <SocialAvatars tip={section.avatars_tip || ''} />
+                </div>
+              )}
+            </div>
+
+            {/* ── RIGHT: topic cards ── */}
+            <div className="w-full lg:w-[360px] shrink-0">
+              {heroSection.knowledge_graph?.nodes?.length ? (() => {
+                const palette = [
+                  {
+                    badge: 'bg-violet-500/12 text-violet-300 border-violet-500/20',
+                    glow:  'before:bg-violet-500/5',
+                    hover: 'hover:border-violet-500/25 hover:bg-violet-500/5',
+                  },
+                  {
+                    badge: 'bg-sky-500/12 text-sky-300 border-sky-500/20',
+                    glow:  'before:bg-sky-500/5',
+                    hover: 'hover:border-sky-500/25 hover:bg-sky-500/5',
+                  },
+                  {
+                    badge: 'bg-emerald-500/12 text-emerald-300 border-emerald-500/20',
+                    glow:  'before:bg-emerald-500/5',
+                    hover: 'hover:border-emerald-500/25 hover:bg-emerald-500/5',
+                  },
+                ];
+                return (
+                  <nav className="flex flex-col gap-3" aria-label={heroSection.knowledge_graph!.title ?? 'Topics'}>
+                    {heroSection.knowledge_graph!.nodes.slice(0, 3).map((node, i) => {
+                      const p = palette[i % palette.length];
+                      return (
+                        <Link
+                          key={node.id ?? node.url}
+                          href={node.url}
+                          className={cn(
+                            'group relative flex items-start gap-4 rounded-2xl border border-border/40 bg-card/30 px-5 py-5',
+                            'transition-all duration-200 no-underline backdrop-blur-sm',
+                            p.hover
+                          )}
+                        >
+                          {/* badge */}
+                          <span className={cn(
+                            'mt-0.5 inline-flex shrink-0 items-center justify-center rounded-lg border px-2.5 py-1 text-[10px] font-bold tracking-[0.12em] uppercase',
+                            p.badge
+                          )}>
+                            {node.title}
+                          </span>
+
+                          {/* text */}
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm text-foreground/80 leading-relaxed">
+                              {node.description}
+                            </p>
+                          </div>
+
+                          {/* arrow */}
+                          <SmartIcon
+                            name="ArrowRight"
+                            className="mt-0.5 size-4 shrink-0 text-muted-foreground/25 group-hover:text-foreground/60 group-hover:translate-x-0.5 transition-all duration-200"
+                          />
+                        </Link>
+                      );
+                    })}
+                  </nav>
+                );
+              })() : hasVideo ? (
               <>
                 <div 
                   className="relative w-full min-h-[400px] md:min-h-[500px] lg:min-h-[600px] overflow-hidden rounded-lg border border-border/50 shadow-lg cursor-pointer group flex items-center justify-center bg-muted/50"
@@ -340,13 +404,15 @@ export function Hero({
                 </div>
               </div>
             ) : null}
-          </div>
-        </div>
-      </div>
+            </div>
+
+          </div>{/* flex row end */}
+        </div>{/* max-w container end */}
+      </div>{/* flex-1 center wrapper end */}
 
       {/* Logos / Partner showcase: hide when hero shows knowledge graph (content site) */}
       {!hasKnowledgeGraph && (
-        <div className="mt-16 md:mt-24">
+        <div className="relative z-10 mt-auto pb-8">
           <SimplePartnerShowcase locale={locale} />
         </div>
       )}
