@@ -15,16 +15,16 @@
       "items": [
         {
           "title": "文档",
-          "url": "/docs"
+          "url": "/vla"
         },
         {
           "title": "知识",
           "children": [
-            { "title": "VLA", "url": "/docs/VLA" },
-            { "title": "VLM", "url": "/docs/VLM" },
-            { "title": "VLA 基础设施", "url": "/docs/VLA_Infra" },
-            { "title": "VLA 资讯", "url": "/docs/VLA_info" },
-            { "title": "行业应用", "url": "/docs/行业" }
+            { "title": "VLA", "url": "/vla/VLA" },
+            { "title": "VLM", "url": "/vla/VLM" },
+            { "title": "VLA 基础设施", "url": "/vla/VLA_Infra" },
+            { "title": "VLA 资讯", "url": "/vla/VLA_info" },
+            { "title": "行业应用", "url": "/vla/行业" }
           ]
         },
         {
@@ -83,7 +83,7 @@
             {
               "title": "文档",
               "description": "阅读文档",
-              "url": "/docs",
+              "url": "/vla",
               "target": "_blank",
               "icon": "BookOpenText"
             }
@@ -156,7 +156,7 @@
           "children": [
             {
               "title": "文档",
-              "url": "/docs",
+              "url": "/vla",
               "target": "_self"
             },
             {

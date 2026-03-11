@@ -17,6 +17,10 @@ export const logs = defineDocs({
   dir: 'content/logs',
 });
 
+export const vlm = defineDocs({
+  dir: 'content/vlm',
+});
+
 /**
  * Rewrite local image paths written by Obsidian (relative to content/docs)
  * into Next.js public-folder absolute paths.

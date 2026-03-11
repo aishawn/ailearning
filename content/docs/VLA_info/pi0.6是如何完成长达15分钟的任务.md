@@ -1,4 +1,4 @@
-# physical intelligence 团队最新长程任务！pi0.6 是如何完成长达 15 分钟的任务？
+
 
 physical intelligence 刚出的一篇 blog，关于VLAs with Long and Short-Term Memory，不得不说，pi最近的动作也越来越多了。
 

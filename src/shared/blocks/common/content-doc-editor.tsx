@@ -155,7 +155,7 @@ export function ContentDocEditor() {
               {saving ? '保存中…' : '保存'}
             </Button>
             <a
-              href={`/docs/${currentPath.replace(/\.(md|mdx)$/i, '')}`}
+              href={`/vla/${currentPath.replace(/\.(md|mdx)$/i, '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm text-primary underline hover:no-underline"

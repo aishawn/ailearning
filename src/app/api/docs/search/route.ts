@@ -15,7 +15,7 @@ const searchI18n: I18nConfig = {
 
 // Create a separate source instance for search with only English language
 const searchSource = loader({
-  baseUrl: '/docs',
+  baseUrl: '/vla',
   source: docs.toFumadocsSource(),
   i18n: searchI18n,
   icon(icon) {

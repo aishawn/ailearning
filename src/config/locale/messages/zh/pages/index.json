@@ -18,7 +18,7 @@
           {
             "title": "浏览文档",
             "icon": "BookOpenText",
-            "url": "/docs",
+            "url": "/vla",
             "target": "_self",
             "variant": "default"
           }
@@ -33,11 +33,11 @@
         "knowledge_graph": {
           "title": "知识图谱",
           "nodes": [
-            { "id": "vla", "title": "VLA", "url": "/docs/VLA", "description": "视觉-语言-动作" },
-            { "id": "vlm", "title": "VLM", "url": "/docs/VLM", "description": "视觉语言模型" },
-            { "id": "vla-infra", "title": "VLA 基础设施", "url": "/docs/VLA_Infra", "description": "基础设施与基准" },
-            { "id": "vla-info", "title": "VLA 资讯", "url": "/docs/VLA_info", "description": "最新研究与动态" },
-            { "id": "industry", "title": "行业应用", "url": "/docs/行业", "description": "按行业分类的应用" }
+            { "id": "vla", "title": "VLA", "url": "/vla/VLA", "description": "视觉-语言-动作" },
+            { "id": "vlm", "title": "VLM", "url": "/vla/VLM", "description": "视觉语言模型" },
+            { "id": "vla-infra", "title": "VLA 基础设施", "url": "/vla/VLA_Infra", "description": "基础设施与基准" },
+            { "id": "vla-info", "title": "VLA 资讯", "url": "/vla/VLA_info", "description": "最新研究与动态" },
+            { "id": "industry", "title": "行业应用", "url": "/vla/行业", "description": "按行业分类的应用" }
           ]
         }
       },
@@ -350,7 +350,7 @@
         "buttons": [
           {
             "title": "进入文档",
-            "url": "/docs",
+            "url": "/vla",
             "target": "_self",
             "icon": "BookOpenText"
           }

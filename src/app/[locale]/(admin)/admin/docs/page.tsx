@@ -59,7 +59,7 @@ export default async function DocsPage({
               name: 'view',
               title: t('list.buttons.view'),
               icon: 'RiEyeLine',
-              url: `/docs/${item.slug}`,
+              url: `/vla/${item.slug}`,
               target: '_blank',
             },
           ];

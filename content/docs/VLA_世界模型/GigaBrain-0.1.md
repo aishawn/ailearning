@@ -1,4 +1,4 @@
-# GigaBrain-0.1
+
 
 GigaBrain-0.1 是另一条技术路线：**World Model + VLA**，目标是通过世界模型解决机器人训练数据不足问题。
 

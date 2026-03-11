@@ -13,7 +13,7 @@
           {
             "title": "Browse Docs",
             "icon": "BookOpen",
-            "url": "/docs",
+            "url": "/vla",
             "target": "_self",
             "variant": "default"
           }
@@ -32,31 +32,31 @@
             {
               "id": "vla",
               "title": "VLA",
-              "url": "/docs/VLA",
+              "url": "/vla/VLA",
               "description": "Vision-Language-Action"
             },
             {
               "id": "vlm",
               "title": "VLM",
-              "url": "/docs/VLM",
+              "url": "/vla/VLM",
               "description": "Vision-Language Models"
             },
             {
               "id": "vla-infra",
               "title": "VLA Infra",
-              "url": "/docs/VLA_Infra",
+              "url": "/vla/VLA_Infra",
               "description": "Infrastructure & Benchmarks"
             },
             {
               "id": "vla-info",
               "title": "VLA News",
-              "url": "/docs/VLA_info",
+              "url": "/vla/VLA_info",
               "description": "Latest research & news"
             },
             {
               "id": "industry",
               "title": "Industries",
-              "url": "/docs/行业",
+              "url": "/vla/行业",
               "description": "Applications by industry"
             }
           ]

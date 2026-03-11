@@ -15,16 +15,16 @@
       "items": [
         {
           "title": "Docs",
-          "url": "/docs"
+          "url": "/vla"
         },
         {
           "title": "Knowledge",
           "children": [
-            { "title": "VLA", "url": "/docs/VLA" },
-            { "title": "VLM", "url": "/docs/VLM" },
-            { "title": "VLA Infra", "url": "/docs/VLA_Infra" },
-            { "title": "VLA News", "url": "/docs/VLA_info" },
-            { "title": "Industries", "url": "/docs/行业" }
+            { "title": "VLA", "url": "/vla/VLA" },
+            { "title": "VLM", "url": "/vla/VLM" },
+            { "title": "VLA Infra", "url": "/vla/VLA_Infra" },
+            { "title": "VLA News", "url": "/vla/VLA_info" },
+            { "title": "Industries", "url": "/vla/行业" }
           ]
         },
         {
