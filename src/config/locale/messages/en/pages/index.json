@@ -6,7 +6,7 @@
         "id": "hero",
         "title": "AI Algorithms & News",
         "highlight_text": "AI",
-        "description": "Your hub for the latest vision-language and embodied AI algorithms, research updates, and industry insights. Explore the knowledge graph to jump to topics.",
+        "description": "Vision-language and embodied AI: algorithms, research, and industry applications.",
         "announcement": null,
         "tip": null,
         "buttons": [
@@ -27,38 +27,11 @@
         "image_invert": null,
         "background_image": null,
         "knowledge_graph": {
-          "title": "Knowledge",
+          "title": "Topics",
           "nodes": [
-            {
-              "id": "vla",
-              "title": "VLA",
-              "url": "/vla/VLA",
-              "description": "Vision-Language-Action"
-            },
-            {
-              "id": "vlm",
-              "title": "VLM",
-              "url": "/vla/VLM",
-              "description": "Vision-Language Models"
-            },
-            {
-              "id": "vla-infra",
-              "title": "VLA Infra",
-              "url": "/vla/VLA_Infra",
-              "description": "Infrastructure & Benchmarks"
-            },
-            {
-              "id": "vla-info",
-              "title": "VLA News",
-              "url": "/vla/VLA_info",
-              "description": "Latest research & news"
-            },
-            {
-              "id": "industry",
-              "title": "Industries",
-              "url": "/vla/行业",
-              "description": "Applications by industry"
-            }
+            { "id": "vlm", "title": "VLM", "url": "/vla/VLM", "description": "Vision-Language Models" },
+            { "id": "vla", "title": "VLA", "url": "/vla/VLA", "description": "Vision-Language-Action & embodied AI" },
+            { "id": "aigc", "title": "AIGC", "url": "/aigc", "description": "Generative AI & content creation" }
           ]
         }
       },

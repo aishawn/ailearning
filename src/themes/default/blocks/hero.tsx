@@ -19,9 +19,7 @@ import type { Hero as HeroType, Section } from '@/shared/types/blocks/landing';
 import { SocialAvatars } from './social-avatars';
 import { Logos } from './logos';
 import SimplePartnerShowcase from './SimplePartnerShowcase';
-import { PartnerShowcases } from './PartnerShowcase';
 import TestimonialsSection from './TestimonialsSection';
-import { KnowledgeGraph } from './knowledge-graph';
 
 // Helper function to extract YouTube video ID from URL
 function getYouTubeVideoId(url: string): string | null {
@@ -174,13 +172,13 @@ export function Hero({
         </Link>
       )}
 
-      {/* Hero Content - Left/Right Layout */}
-      <div className="container mx-auto px-4 mb-16 md:mb-24 max-w-none">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-12">
-          {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left py-8 md:py-12">
+      {/* Hero Content - Left/Right Layout: 简洁、专业；右侧 VLM / VLA / AIGC 三模块 */}
+      <div className="container mx-auto px-4 mb-16 md:mb-24 max-w-6xl">
+        <div className="grid gap-10 lg:grid-cols-[1fr_340px] lg:items-center lg:gap-16">
+          {/* Left - 简洁标题与描述 */}
+          <div className="text-center lg:text-left">
             {texts && texts.length > 0 ? (
-              <h1 className="text-foreground text-4xl font-semibold text-balance sm:text-5xl lg:text-6xl">
+              <h1 className="text-foreground text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
                 {texts[0]}
                 <Highlighter action="underline" color="#6366F1">
                   {highlightText}
@@ -188,85 +186,68 @@ export function Hero({
                 {texts[1]}
               </h1>
             ) : (
-              <h1 className="text-foreground text-4xl font-semibold text-balance sm:text-5xl lg:text-6xl">
+              <h1 className="text-foreground text-3xl font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
                 {section.title}
               </h1>
             )}
 
             <p
-              className="text-muted-foreground mt-6 mb-8 text-lg text-balance"
+              className="text-muted-foreground mt-4 mb-6 text-base text-balance max-w-xl mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{ __html: section.description ?? '' }}
             />
 
-            {section.buttons && (
-              <div className="flex items-center justify-center gap-4 lg:justify-start">
-                {section.buttons.map((button, idx) => (
+            {section.buttons && section.buttons.length > 0 && (
+              <div className="flex items-center justify-center gap-3 lg:justify-start">
+                {section.buttons.slice(0, 1).map((button, idx) => (
                   <Button
                     asChild
-                    size={button.size || 'default'}
-                    variant={button.variant || 'default'}
-                    className={cn(
-                      'px-4 text-sm rounded-full',
-                      'bg-white text-black border-black hover:bg-gray-50 border shadow-sm'
-                    )}
+                    size="default"
+                    variant="outline"
+                    className="rounded-md border-foreground/20 bg-background text-foreground hover:bg-muted"
                     key={idx}
                   >
-                    <Link href={button.url ?? ''} target={button.target ?? '_self'}>
-                      {/* {button.icon && <SmartIcon name={button.icon as string} />} */}
-                      <span className="flex items-center gap-2">
-                        {button.title}
-                        <span className="flex size-5 items-center justify-center rounded-full bg-black">
-                          <SmartIcon name="ArrowUpRight" className="size-3 text-white" />
-                        </span>
-                      </span>
+                    <Link href={button.url ?? ''} target={button.target ?? '_self'} className="inline-flex items-center gap-2">
+                      {button.title}
+                      <SmartIcon name="ArrowRight" className="size-4" />
                     </Link>
                   </Button>
                 ))}
               </div>
             )}
 
-            {/* Used by 150+ businesses section - hide on content site (knowledge graph) */}
-            {!hasKnowledgeGraph && (
-            <div className="mt-8 flex items-center justify-center gap-3 lg:justify-start">
-              <div className="relative h-12 w-12 flex-shrink-0 flex items-center">
-                <Image
-                  src="/imgs/avatars/Group-1597883677.avif"
-                  alt="Clients"
-                  width={48}
-                  height={48}
-                  className="object-contain"
-                  loading="lazy"
-                />
-              </div>
-              <div className="flex items-baseline gap-2 text-sm leading-none">
-                <span className="text-muted-foreground">Used by</span>
-                <span className="font-semibold text-foreground">150+</span>
-                <span className="text-muted-foreground">businesses</span>
-              </div>
-            </div>
-            )}
-
             {section.tip && (
               <p
-                className="text-muted-foreground mt-6 block text-sm"
+                className="text-muted-foreground mt-4 block text-sm"
                 dangerouslySetInnerHTML={{ __html: section.tip ?? '' }}
               />
             )}
 
             {section.show_avatars && (
-              <div className="mt-8 flex justify-center lg:justify-start">
+              <div className="mt-6 flex justify-center lg:justify-start">
                 <SocialAvatars tip={section.avatars_tip || ''} />
               </div>
             )}
           </div>
 
-          {/* Right Side - Knowledge Graph, Video or Image */}
-          <div className="relative flex items-center justify-center">
+          {/* Right - 三模块：VLM、VLA、AIGC */}
+          <div className="relative flex flex-col gap-3">
             {heroSection.knowledge_graph?.nodes?.length ? (
-              <KnowledgeGraph
-                section={heroSection.knowledge_graph}
-                className="mx-auto"
-              />
+              <nav className="grid gap-3" aria-label={heroSection.knowledge_graph.title ?? 'Topics'}>
+                {heroSection.knowledge_graph.nodes.slice(0, 3).map((node) => (
+                  <Link
+                    key={node.id ?? node.url}
+                    href={node.url}
+                    className={cn(
+                      'group flex items-center gap-4 rounded-lg border border-border/60 bg-card px-4 py-3.5 text-left',
+                      'hover:border-primary/40 hover:bg-muted/50 transition-colors duration-200 no-underline'
+                    )}
+                  >
+                    <span className="text-sm font-semibold text-foreground shrink-0 w-14">{node.title}</span>
+                    <span className="text-muted-foreground text-sm flex-1 line-clamp-1">{node.description}</span>
+                    <SmartIcon name="ArrowRight" className="size-4 shrink-0 text-muted-foreground group-hover:text-primary group-hover:translate-x-0.5 transition-all" />
+                  </Link>
+                ))}
+              </nav>
             ) : hasVideo ? (
               <>
                 <div 

@@ -21,6 +21,14 @@ export const vlm = defineDocs({
   dir: 'content/vlm',
 });
 
+export const aigc = defineDocs({
+  dir: 'content/aigc',
+});
+
+export const grow = defineDocs({
+  dir: 'content/grow',
+});
+
 /**
  * Rewrite local image paths written by Obsidian (relative to content/vla)
  * into Next.js public-folder absolute paths.

@@ -1,6 +1,6 @@
 // .source folder will be generated when you run `next dev`
 import { createElement } from 'react';
-import { docs, logs, pages, posts, vlm } from '@/.source';
+import { aigc, docs, grow, logs, pages, posts, vlm } from '@/.source';
 import type { I18nConfig } from 'fumadocs-core/i18n';
 import { loader } from 'fumadocs-core/source';
 import { icons } from 'lucide-react';
@@ -54,6 +54,22 @@ export const logsSource = loader({
 export const vlmSource = loader({
   baseUrl: '/vlm',
   source: vlm.toFumadocsSource(),
+  i18n,
+  icon: iconHelper,
+});
+
+// AIGC source (independent section at /aigc)
+export const aigcSource = loader({
+  baseUrl: '/aigc',
+  source: aigc.toFumadocsSource(),
+  i18n,
+  icon: iconHelper,
+});
+
+// Grow source (independent section at /grow)
+export const growSource = loader({
+  baseUrl: '/grow',
+  source: grow.toFumadocsSource(),
   i18n,
   icon: iconHelper,
 });

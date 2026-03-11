@@ -11,7 +11,7 @@
         "id": "hero",
         "title": "AI 算法与资讯",
         "highlight_text": "AI",
-        "description": "专注视觉-语言与具身智能最新算法、研究动态与行业应用。点击知识图谱进入对应知识页。",
+        "description": "视觉-语言与具身智能：算法、研究与行业应用。",
         "announcement": null,
         "tip": null,
         "buttons": [
@@ -31,13 +31,11 @@
         "image_invert": null,
         "background_image": null,
         "knowledge_graph": {
-          "title": "知识图谱",
+          "title": "知识模块",
           "nodes": [
-            { "id": "vla", "title": "VLA", "url": "/vla/VLA", "description": "视觉-语言-动作" },
             { "id": "vlm", "title": "VLM", "url": "/vla/VLM", "description": "视觉语言模型" },
-            { "id": "vla-infra", "title": "VLA 基础设施", "url": "/vla/VLA_Infra", "description": "基础设施与基准" },
-            { "id": "vla-info", "title": "VLA 资讯", "url": "/vla/VLA_info", "description": "最新研究与动态" },
-            { "id": "industry", "title": "行业应用", "url": "/vla/行业", "description": "按行业分类的应用" }
+            { "id": "vla", "title": "VLA", "url": "/vla/VLA", "description": "视觉-语言-动作与具身智能" },
+            { "id": "aigc", "title": "AIGC", "url": "/aigc", "description": "生成式 AI 与内容创作" }
           ]
         }
       },
