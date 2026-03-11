@@ -33,13 +33,13 @@
             {
               "id": "vlm",
               "title": "VLM",
-              "url": "/vla/VLM",
+              "url": "/vlm",
               "description": "Vision-Language Models"
             },
             {
               "id": "vla",
               "title": "VLA",
-              "url": "/vla/VLA",
+              "url": "/vla",
               "description": "Vision-Language-Action & embodied AI"
             },
             {
