@@ -92,7 +92,7 @@
     
 - 回答错误得 - 1 分；
     
-- 拒绝回答得 ![图片](https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFrM4V9LUxmC9qFhEnd94ldxkt25EyEAVb4HEUCgNByoZ0SF5ZWibk6WO3nP4sSYpOBcBV87hXjWhY6jVBwy8otdKlicjpYTtYTk/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=11) 分。
+- 拒绝回答得 ![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/e903ecb99195a733.png) 分。
     
 
   
@@ -109,7 +109,7 @@
 
   
 
-这个奖励可以分解为正确性奖励 ![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/4ba5475716b040e4.png) 和置信度校准的 Brier 分数 ![图片](https://mmbiz.qpic.cn/mmbiz_png/5L8bhP5dIqFJl4MhAjX4tCricD60GXmnH47WNbQ3t2mAh07JlVkPvqbbGzrwTq7xgJULSicHzedEwVpcGzuAkJnHSmRQJqKJvZc3mAeRHPM9w/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=16) 之差，激励模型在最大化预测准确率的同时，校准其声明的置信度。
+这个奖励可以分解为正确性奖励 ![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/4ba5475716b040e4.png) 和置信度校准的 Brier 分数 ![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/ec2c4315de44e9fc.png) 之差，激励模型在最大化预测准确率的同时，校准其声明的置信度。
 
   
 
@@ -238,7 +238,7 @@ Confidence AUC：使用模型的置信度分数对正确和错误回答进行排
 
   
 
-![图片](https://mmbiz.qpic.cn/sz_mmbiz_png/5L8bhP5dIqHtEuf70g0YlUBlxvVoztRBgqVLEvP77H0jQyAUicXE7vWFaqeO5XcDPXJLnpXXRqP2uwNEWdRIYYY8CQETQ7qkjIhZsWqODS8c/640?wx_fmt=png&from=appmsg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=30)
+![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/619986e0f69a57ef.png)
 
 图4：在不同风险阈值下的准确率、拒绝率和幻觉率变化曲线。绿色区域代表准确率，黄色区域代表拒绝率，红色区域代表幻觉率。随着风险阈值t的增加，模型逐渐从「应试者模式」过渡到「完全诚实模式」。
 
