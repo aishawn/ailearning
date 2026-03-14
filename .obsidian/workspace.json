@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/vlm/经验记录/2026.md",
+                "file": "content/vlm/LLM/4B模型幻觉抑制能力 行为校准强化学习（Behaviorally Calibrated Reinforcement Learning） 超越GPT-5，CMU等提出行为校准强化学习新方法.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026"
+              "title": "4B模型幻觉抑制能力 行为校准强化学习（Behaviorally Calibrated Reinforcement Learning） 超越GPT-5，CMU等提出行为校准强化学习新方法"
             }
           }
         ]
@@ -171,8 +171,8 @@
   },
   "active": "dc46f1db19b21661",
   "lastOpenFiles": [
-    "content/vla/VLN/MWM.md",
     "content/vlm/经验记录/2026.md",
+    "content/vla/VLN/MWM.md",
     "content/vlm/经验记录",
     "content/vla/VLA_世界模型/WorldCompass 混元世界模型再进化：开源首个面向世界模型的强化学习后训练框架.md",
     "content/aigc/AIGC/CAWM-Mamba：首个复合恶劣天气图像融合框架 ESWA 2026｜佛山大学.md",
