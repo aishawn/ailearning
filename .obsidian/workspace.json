@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/vlm/LLM/4B模型幻觉抑制能力 行为校准强化学习（Behaviorally Calibrated Reinforcement Learning） 超越GPT-5，CMU等提出行为校准强化学习新方法.md",
+                "file": "content/vlm/VLM_基础/基础模块.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "4B模型幻觉抑制能力 行为校准强化学习（Behaviorally Calibrated Reinforcement Learning） 超越GPT-5，CMU等提出行为校准强化学习新方法"
+              "title": "基础模块"
             }
           }
         ]
@@ -172,6 +172,9 @@
   "active": "dc46f1db19b21661",
   "lastOpenFiles": [
     "content/vlm/经验记录/2026.md",
+    "content/vlm/VLM_基础/基础模块.md",
+    "content/vlm/VLM_基础",
+    "content/vlm/LLM/4B模型幻觉抑制能力 行为校准强化学习（Behaviorally Calibrated Reinforcement Learning） 超越GPT-5，CMU等提出行为校准强化学习新方法.md",
     "content/vla/VLN/MWM.md",
     "content/vlm/经验记录",
     "content/vla/VLA_世界模型/WorldCompass 混元世界模型再进化：开源首个面向世界模型的强化学习后训练框架.md",
@@ -182,7 +185,6 @@
     "content/vla/VLA_COT",
     "content/vlm/VLM_部署/CVPR 2026 V²Drop：基于Token变化量的即插即用加速方案，VLM推理快又准！.md",
     "content/vla/VLN/Loco-Manipulation.md",
-    "content/vlm/LLM/4B模型幻觉抑制能力 行为校准强化学习（Behaviorally Calibrated Reinforcement Learning） 超越GPT-5，CMU等提出行为校准强化学习新方法.md",
     "content/vla/行业分析/融资信息.md",
     "content/vla/行业分析/无人机uav.md",
     "content/vla/VLA_info/EvoDriveVLA：通过蒸馏进化VLA，感知规划不再割裂.md",
@@ -206,9 +208,7 @@
     "content/vlm/VLM_特征检索",
     "content/vla/VLA_数据/具身数据路线.md",
     "content/vlm/VLM_视觉/Penguin-VL.md",
-    "content/vlm/VLM/qwenvl串讲.md",
     "content/growth-hacking/index.mdx",
-    "content/growth-hacking/FastGrowTrick",
     "public/docs-images/docs/dc3be508436b5c7b758cf95c57de8664.png",
     "public/docs-images/docs/bf6291bd6be06b1de12c16d4881ce828.png",
     "public/docs-images/docs/b7e1431c1228add0ad7be3236ed8ad00.png",
