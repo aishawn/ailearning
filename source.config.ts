@@ -54,8 +54,11 @@ export default defineConfig({
   mdxOptions: {
     // Disable fetching external image sizes at build time (avoids failures when
     // remote URLs return HTML, e.g. R2 403/404 or redirects in Docker/CI).
+    // useImport: false — emit image paths as runtime URLs (e.g. src="/docs-images/...")
+    // so the build does not require image files to exist; Next serves from public at runtime.
     remarkImageOptions: {
       external: false,
+      useImport: false,
     },
     rehypeCodeOptions: {
       themes: {

@@ -1,5 +1,14 @@
 
-GSPO 更适合 MoE，因为它把 RL 的“路径级强化”变成“分布级匹配”，显著降低稀疏专家结构中的梯度方差和 router collapse 风险。
+GSPO 更适合 MoE，因为它把 RL 的“路径级强化”变成“分布级匹配”，显著降低稀疏专家结构中的
+梯度方差和 router collapse 风险。
+
+
+
+PPO 依赖 value function，训练复杂。  
+Reinforce++ 去掉 value head，但 variance 较大。  
+GRPO 引入 group relative advantage，大幅降低 variance，是目前大模型 RL 的主流方法。  
+DAPO 在 GRPO 基础上加入 dynamic advantage scaling，提高稳定性。  
+FRPO 则通过 forward KL 提高探索能力。
 
 
 一、整体脉络
