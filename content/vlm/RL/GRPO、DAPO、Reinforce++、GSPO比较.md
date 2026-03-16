@@ -1,6 +1,7 @@
 
 GSPO 更适合 MoE，因为它把 RL 的“路径级强化”变成“分布级匹配”，显著降低稀疏专家结构中的
 梯度方差和 router collapse 风险。
+然后利用GSPO在组内基于序列重要性权重裁剪优势函数，缓解长序列梯度不稳。
 
 
 
@@ -9,6 +10,9 @@ Reinforce++ 去掉 value head，但 variance 较大。
 GRPO 引入 group relative advantage，大幅降低 variance，是目前大模型 RL 的主流方法。  
 DAPO 在 GRPO 基础上加入 dynamic advantage scaling，提高稳定性。  
 FRPO 则通过 forward KL 提高探索能力。
+
+
+[PPO](https://github.com/verl-project/verl/blob/main/examples/ppo_trainer), [GRPO](https://github.com/verl-project/verl/blob/main/examples/grpo_trainer), [GSPO](https://github.com/verl-project/verl-recipe/tree/main/gspo/), [ReMax](https://github.com/verl-project/verl/blob/main/examples/remax_trainer), [REINFORCE++](https://verl.readthedocs.io/en/latest/examples/config.html#algorithm), [RLOO](https://github.com/verl-project/verl/blob/main/examples/rloo_trainer), [PRIME](https://github.com/verl-project/verl-recipe/tree/main/prime/), [DAPO](https://github.com/verl-project/verl-recipe/tree/main/dapo/), [DrGRPO](https://github.com/verl-project/verl-recipe/tree/main/drgrpo), [KL_Cov & Clip_Cov](https://github.com/verl-project/verl-recipe/tree/main/entropy) etc.
 
 
 一、整体脉络
