@@ -1,4 +1,3 @@
-### CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation
 
 **arXiv**: 2603.08652 (2026年3月9日提交)
 

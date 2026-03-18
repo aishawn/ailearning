@@ -1,4 +1,4 @@
-<section id="foundation-models"></section>
+
 
 ## Vision Foundation Models —— 视觉基础模型在具身智能中的角色
 

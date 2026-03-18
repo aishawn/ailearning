@@ -1,4 +1,3 @@
-<h1 align="center">Embodied-AI-Guide<br>Companies</h1>
 
 ## Companies —— 公司与硬件生态
 

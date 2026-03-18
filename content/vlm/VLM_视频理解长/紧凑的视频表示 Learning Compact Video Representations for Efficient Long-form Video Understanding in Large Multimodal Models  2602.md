@@ -1,9 +1,4 @@
 
-# Learning Compact Video Representations for Efficient Long-form Video Understanding in Large Multimodal Models
-
-**Authors:** Yuxiao Chen, Jue Wang, Zhikang Zhang, Jingru Yi, Xu Zhang, Yang Zou, Zhaowei Cai, Jianbo Yuan, Xinyu Li, Hao Yang, Davide Modolo
-
-
 1) 如何在内存限制下高效处理大量帧；2) 如何从海量输入数据中提取最具辨别力的信息。
 
 

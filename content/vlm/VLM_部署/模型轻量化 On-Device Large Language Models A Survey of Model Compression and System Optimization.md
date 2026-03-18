@@ -129,7 +129,6 @@
 
 归根结底，端侧大模型不是单点突破的问题，而是一个跨层协同的问题。它需要算法创新，也需要系统工程；需要模型理解，也需要硬件理解。正如论文总结所强调的那样：**有效的边缘部署，本质上是一个协同设计问题。模型压缩负责创造机会，而编译器、运行时与 KV 管理负责把机会变成真实速度与可靠性。**
 
-![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/094eaec9ada8565f.jpeg)
 
 **论文题目：**On-Device Large Language Models: A Survey of Model Compression and System Optimization
 

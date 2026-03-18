@@ -1,6 +1,4 @@
-随着高分辨率图像和长视频需求的爆发，大型视觉语言模型（LVLMs）的 Token 数量急剧膨胀，推理慢、显存告急成为落地死穴。四川大学团队敏锐发现，传统基于 Attention 权重的 Token 压缩存在严重的“末端位置偏置”。为此，他们提出基于 Token 内在变化量的 V²Drop 框架，不仅无需修改模型权重、完美兼容 FlashAttention，更在 LLaVA 和 Qwen2-VL 上实现了降维打击般的无损加速与显存缩减！ >>[加入极市CV技术交流群，走在计算机视觉的最前沿](http://mp.weixin.qq.com/s?__biz=MzI5MDUyMDIxNA==&mid=2247618084&idx=1&sn=981fa2ed41e2eda97799ae098b7c8907&chksm=ec1de3dddb6a6acb719081ffef32f72b72e7d6416f3504bf7049594b9f34f2d6cf570654ae21&scene=21#wechat_redirect)
-
-作者介绍：第一作者陈骏杰（四川大学硕士二年级）与共同一作刘旭洋（四川大学硕士三年级）深耕高效视觉语言模型。
+随着高分辨率图像和长视频需求的爆发，大型视觉语言模型（LVLMs）的 Token 数量急剧膨胀，推理慢、显存告急成为落地死穴。四川大学团队敏锐发现，传统基于 Attention 权重的 Token 压缩存在严重的“末端位置偏置”。为此，他们提出基于 Token 内在变化量的 V²Drop 框架，不仅无需修改模型权重、完美兼容 FlashAttention，更在 LLaVA 和 Qwen2-VL 上实现了降维打击般的无损加速与显存缩减！
 
 ![图片](https://pub-adba99cbc4cd4237a5ed7de21ad26f3c.r2.dev/md-img/2a67a3032b4b1456.png)
 

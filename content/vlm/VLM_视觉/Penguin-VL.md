@@ -1,5 +1,4 @@
-用 LLM 作为视觉 encoder，  
-解决 CLIP encoder 的目标错配问题，  
+用 LLM 作为视觉 encoder，  解决 CLIP encoder 的目标错配问题，  
 让小规模 VLM 也能拥有强视觉理解能力。
 
 

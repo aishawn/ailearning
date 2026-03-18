@@ -23,6 +23,23 @@
         - 路由机制自动让不同专家偏向不同模态（视觉专家和语言专家自然分离）；
         - 训练和推理效率远高于稠密模型。
 
+备注：RAE Representation AutoEncoder   RAE = CLIP级语义 + VAE级可重建
+
+
+
+
+
+x（图像/视频帧）  
+↓  
+Encoder（语义模型）  
+↓  
+z（连续 latent tokens）  
+↓  
+Decoder（生成模型）  
+↓  
+x'（重建图像）
+备注：
+1.**Encoder 是强语义视觉 backbone**
 
 
 

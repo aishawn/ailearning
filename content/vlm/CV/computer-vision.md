@@ -1,6 +1,6 @@
-<section id="cv"></section>
 
-## (6) Computer Vision —— 计算机视觉
+
+## Computer Vision —— 计算机视觉
 
 具身智能几乎所有下游能力（抓取、操作、导航、交互）都建立在视觉之上。和纯 CV 不同，具身更关心的是：**在变化的光照、遮挡、视角、运动模糊与跨域条件下，视觉表征是否稳定**，以及它是否能与几何（深度/点云）和语言（指令/目标）对齐。本节将视觉按“2D → 3D → 4D（视频/时序）→ Prompting/可供性”串起来，便于你形成一条连续的学习路线。
 
@@ -8,7 +8,7 @@
 |---|---|---|
 | CS231n（Stanford） | [link](https://cs231n.stanford.edu/schedule.html) | 深度学习 CV 全景课，适合视频+讲义快速建立体系 |
 
-### (6.1) 2D / 3D / 4D Vision（从图像到时空）
+### 2D / 3D / 4D Vision（从图像到时空）
 
 > 为了不把页面拉得太长，这里把 2D/3D/4D 的资源合并成一个“能力栈表”。你可以按需选择深入方向。
 
@@ -23,7 +23,7 @@
 | 4D Vision | 视频理解：时序建模与跨帧一致性（具身中非常常见）    | 开山之作 / 串讲 / 综述                          | 开山：[link](https://www.bilibili.com/video/BV1mq4y1x7RU；串讲：https://www.bilibili.com/video/BV1fL4y157yA；综述：https://arxiv.org/pdf/2312.17432)                                                              |
 | 4D Gen    | 视频/4D 生成（用于合成与世界建模相关）       | Lilian Weng 视频扩散博客 / 4D generation list | 博客：[link](https://lilianweng.github.io/posts/2024-04-12-diffusion-video/；list：https://github.com/cwchenwang/awesome-4d-generation)                                                                     |
 
-### (6.2) Visual Prompting & Affordance Grounding
+### Visual Prompting & Affordance Grounding
 
 具身视觉的一个关键变化是：我们不只想识别物体，而是要回答“**哪里能抓、怎么推、哪能开合**”。  
 因此在工程系统里，视觉常常以两种形式进入控制：  

@@ -3,6 +3,8 @@
 2.第二大关键点，在于上下文长度。
 3.优化则集中在 回复质量的提升
 
+来自 BOSS 直聘
+
 1.Solution Refinement 与 CoT Reconstruction 
 2.
 - Point-wise RL：核心目标很是提升单条回答的质量。引入通用 Reward Model，对回答质量进行评分，显著降低冗长、重复与格式错误。

@@ -1,4 +1,4 @@
-<section id="embodied-ai-4-x"></section>
+
 <section id="medical"></section>
 
 ## (10) Embodied AI for X - 具身智能+X

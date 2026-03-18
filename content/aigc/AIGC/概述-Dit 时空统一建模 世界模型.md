@@ -1,6 +1,6 @@
 
 
-# 四、第四阶段：Transformer化（DiT时代）
+# Transformer化（DiT时代）
 
 ## 代表
 

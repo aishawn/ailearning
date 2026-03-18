@@ -13,7 +13,7 @@ Multimodal World Model（统一生成）
 
 
 
-# 第三阶段：Diffusion（革命性阶段）
+# Diffusion（革命性阶段）
 
 ## 代表
 

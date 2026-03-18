@@ -1,8 +1,6 @@
 
 GSPO 更适合 MoE，因为它把 RL 的“路径级强化”变成“分布级匹配”，显著降低稀疏专家结构中的
-梯度方差和 router collapse 风险。
-然后利用GSPO在组内基于序列重要性权重裁剪优势函数，缓解长序列梯度不稳。
-
+梯度方差和 router collapse 风险。然后利用GSPO在组内基于序列重要性权重裁剪优势函数，缓解长序列梯度不稳。
 
 
 PPO 依赖 value function，训练复杂。  
@@ -11,499 +9,357 @@ GRPO 引入 group relative advantage，大幅降低 variance，是目前大模�
 DAPO 在 GRPO 基础上加入 dynamic advantage scaling，提高稳定性。  
 FRPO 则通过 forward KL 提高探索能力。
 
+| 类别                             | 方法                       |
+| ------------------------------ | ------------------------ |
+| **Policy Gradient（高方差）**       | PPO / REINFORCE++ / RLOO |
+| **Variance-reduced PG（主流）**    | GRPO / DAPO / DrGRPO     |
+| **Distribution Matching（新趋势）** | GSPO / ReMax / PRIME     |
 
-[PPO](https://github.com/verl-project/verl/blob/main/examples/ppo_trainer), [GRPO](https://github.com/verl-project/verl/blob/main/examples/grpo_trainer), [GSPO](https://github.com/verl-project/verl-recipe/tree/main/gspo/), [ReMax](https://github.com/verl-project/verl/blob/main/examples/remax_trainer), [REINFORCE++](https://verl.readthedocs.io/en/latest/examples/config.html#algorithm), [RLOO](https://github.com/verl-project/verl/blob/main/examples/rloo_trainer), [PRIME](https://github.com/verl-project/verl-recipe/tree/main/prime/), [DAPO](https://github.com/verl-project/verl-recipe/tree/main/dapo/), [DrGRPO](https://github.com/verl-project/verl-recipe/tree/main/drgrpo), [KL_Cov & Clip_Cov](https://github.com/verl-project/verl-recipe/tree/main/entropy) etc.
+| 方法          | 是否PG | 是否value | 方差  | 稳定性 | MoE友好 | 结论           |
+| ----------- | ---- | ------- | --- | --- | ----- | ------------ |
+| PPO         | ✅    | ✅       | 中   | 中   | ❌     | 过时           |
+| REINFORCE++ | ✅    | ❌       | ❌高  | ❌   | ❌     | baseline     |
+| RLOO        | ✅    | ❌       | 中   | 中   | ❌     | 过渡           |
+| GRPO        | ✅    | ❌       | 低   | 高   | 一般    | 主流           |
+| DAPO        | ✅    | ❌       | 更低  | 更高  | 一般    | 工业版          |
+| DrGRPO      | ✅    | ❌       | 低   | 很高  | 一般    | noisy reward |
+| GSPO        | ❌    | ❌       | 极低  | 极高  | ✅     | 未来           |
+| ReMax       | ❌    | ❌       | 低   | 高   | ✅     | GSPO同类       |
+| PRIME       | 混合   | ❌       | 低   | 高   | ✅     | 统一框架         |
 
 
-一、整体脉络
+## 👉 场景1：通用 LLM RLHF（非 MoE）
 
-传统 RLHF 用的是：
+- 首选：**GRPO / DAPO**
+    
+- 原因：稳定 + 成熟
+    
 
-Proximal Policy Optimization（PPO）
+---
 
-但 PPO 在 LLM 上有几个问题：
+## 👉 场景2：长 CoT / reasoning
 
-需要 value head（训练复杂）
+- 首选：**DAPO / DrGRPO**
+    
+- 原因：抗 reward spike
+    
 
-advantage 估计不稳定
+---
 
-KL 约束不好调
+## 👉 场景3：MoE / 超大模型（未来主流）
 
-大 batch 难 scale
+- 首选：**GSPO / ReMax**
+    
+- 原因：
+    
+    - dense gradient
+        
+    - 不会 collapse
+        
 
-于是就出现了一系列 “PPO-free” 或 “no-value” 方法：
+---
 
-方法	核心思想
-Reinforce++	改良版 REINFORCE
-GRPO	组内排序代替 value
-DAPO	动态 advantage
-GSPO	group soft preference 优化
+## 👉 场景4：弱 reward / noisy reward
 
+- 首选：**DrGRPO / PRIME**
+    
 
+---
 
-GSPO 之所以在 MoE 上更优，是因为它把“路径级强化”变成“分布级匹配”，大幅降低了稀疏专家结构下的梯度方差与路由崩溃风险。
+## 👉 场景5：极致简单快速验证
 
+- 用：**REINFORCE++ / RLOO**
 
-GSPO = 软排序最大似然
 
-MoE 在 RL 阶段的两个大问题
-① 梯度极度不均匀
-② reward scale 放大 MoE 不稳定性
-GSPO（Group Soft Preference Optimization）
-GSPO 是更接近 DPO 思路的一种 group 版本。
 
 
 
-MOE模型为什么用 GSPO更优？
 
-这个问题问得非常关键。
+## PPO（传统 RLHF）
 
-为什么 MoE 模型在 RL 阶段往往 GSPO 比 GRPO / PPO 更优？
+**核心：**
 
-我从 梯度稳定性 → 专家路由 → credit assignment → 数学层面 四个层面给你拆开讲。
+A=r−V(s)A = r - V(s)A=r−V(s)
 
-一、先明确两个对象
+**特点：**
 
-MoE 模型：例如 Google DeepMind 的 Switch Transformer
+- 需要 value head
+    
+- clip + KL 约束
+    
 
-GSPO：Group Soft Preference Optimization（多样本 soft preference 优化）
+**优点：**
 
-二、MoE 模型的核心问题
+- 理论成熟
+    
+- 稳定（在小模型）
+    
 
-MoE 的 forward 结构是：
+**缺点：**
 
-x → router → top-k experts → combine → output
+- ❌ 训练复杂（policy + value）
+    
+- ❌ advantage 估计噪声大
+    
+- ❌ 不适合大模型 / MoE
+    
 
-本质是：
+👉 **结论：已逐渐被替代**
 
-𝑦
-=
-∑
-𝑖
-∈
-𝑡
-𝑜
-𝑝
-𝑘
-𝑔
-𝑖
-(
-𝑥
-)
-𝐸
-𝑖
-(
-𝑥
-)
-y=
-i∈topk
-∑
-	​
+---
 
-g
-i
-	​
+## 2️⃣ REINFORCE++（最简单）
 
-(x)E
-i
-	​
+**核心：**
 
-(x)
+∇θ∝r∇log⁡π\nabla \theta \propto r \nabla \log \pi∇θ∝r∇logπ
 
-其中：
+**特点：**
 
-𝑔
-𝑖
-(
-𝑥
-)
-g
-i
-	​
+- 无 value head
+    
+- 直接用 reward
+    
 
-(x) 是 router gate
+**优点：**
 
-𝐸
-𝑖
-E
-i
-	​
-
- 是 expert
-
-MoE 在 RL 阶段的两个大问题
-① 梯度极度不均匀
-
-Policy Gradient 类方法（GRPO / PPO）：
-
-∇
-𝜃
-∝
-𝐴
-∇
-𝑙
-𝑜
-𝑔
-𝜋
-(
-𝑦
-)
-∇θ∝A∇logπ(y)
-
-问题在于：
-
-只有生成的 token 路径上的 expert 会被更新
-
-低 reward → 整条路径梯度为负
-
-高 reward → 整条路径梯度为正
-
-于是：
-
-少数 expert 被疯狂强化
-其他 expert 梯度稀疏甚至消失
-
-容易：
-
-router collapse
-
-expert specialization 过早固化
-
-训练震荡
-
-② reward scale 放大 MoE 不稳定性
-
-MoE 参数巨大、稀疏激活。
-
-如果 reward 有尖峰（reasoning 场景常见）：
-
-GRPO/DAPO 属于 policy gradient
-
-梯度直接乘 advantage
-
-会导致：
-
-𝑙
-𝑎
-𝑟
-𝑔
-𝑒
- 
-𝐴
-×
-𝑠
-𝑝
-𝑎
-𝑟
-𝑠
-𝑒
- 
-𝑝
-𝑎
-𝑡
-ℎ
-large A×sparse path
-
-→ 梯度爆炸集中到某些 expert
-
-三、GSPO 的核心不同
-
-GSPO 不做 policy gradient。
-
-它做的是：
-
-𝑠
-𝑜
-𝑓
-𝑡
-𝑚
-𝑎
-𝑥
-(
-𝑟
-𝑖
-)
-→
-𝑡
-𝑎
-𝑟
-𝑔
-𝑒
-𝑡
- 
-𝑑
-𝑖
-𝑠
-𝑡
-𝑟
-𝑖
-𝑏
-𝑢
-𝑡
-𝑖
-𝑜
-𝑛
-softmax(r
-i
-	​
-
-)→target distribution
-
-然后优化：
-
-𝐾
-𝐿
-(
-𝜋
-𝜃
-∣
-∣
-𝑠
-𝑜
-𝑓
-𝑡
-𝑚
-𝑎
-𝑥
-(
-𝑟
-)
-)
-KL(π
-θ
-	​
-
-∣∣softmax(r))
-
-等价于：
-
-让模型输出概率分布匹配 reward soft 排序
-
-四、为什么 GSPO 更适合 MoE？
-1️⃣ 梯度是“分布级”的，而不是“路径级”的
-
-GRPO：
-
-𝐴
-𝑖
-∇
-𝑙
-𝑜
-𝑔
-𝜋
-(
-𝑦
-𝑖
-)
-A
-i
-	​
-
-∇logπ(y
-i
-	​
-
-)
-
-是 sample-based。
-
-GSPO：
-
-∑
-𝑖
-𝑤
-𝑖
-∇
-𝑙
-𝑜
-𝑔
-𝜋
-(
-𝑦
-𝑖
-)
-i
-∑
-	​
+- 简单
+    
+- 无 bias
+    
 
-w
-i
-	​
+**缺点：**
 
-∇logπ(y
-i
-	​
+- ❌ 方差极大
+    
+- ❌ 不稳定
+    
 
-)
+👉 **结论：baseline / 小规模实验用**
 
-是 distribution-based。
+---
 
-在 MoE 中这意味着：
+## 3️⃣ RLOO（Leave-One-Out）
 
-方法	梯度流动
-GRPO	只强化单条 expert 路径
-GSPO	多个候选路径都被软更新
+**核心：**
 
-结果：
+Ai=ri−mean(r−i)A_i = r_i - \text{mean}(r_{-i})Ai​=ri​−mean(r−i​)
 
-不会让单个 expert 垄断
+**特点：**
 
-router 更新更平滑
+- 用 group 内其他样本做 baseline
+    
 
-2️⃣ Soft weight 避免 router collapse
+**优点：**
 
-MoE 的 router 训练本来就敏感。
+- 降方差
+    
+- 无 value head
+    
 
-Policy Gradient：
+**缺点：**
 
-∇
-𝑔
-∝
-𝐴
-∇g∝A
+- still sample-based
+    
+- 对 group size 敏感
+    
 
-如果 A 很极端：
+👉 **结论：GRPO 的前身版本**
 
-router 迅速偏向某 expert
+---
 
-负反馈很难恢复
+## 4️⃣ GRPO（🔥当前主流）
 
-GSPO：
+**核心：**
 
-𝑤
-𝑖
-=
-𝑠
-𝑜
-𝑓
-𝑡
-𝑚
-𝑎
-𝑥
-(
-𝑟
-𝑖
-)
-w
-i
-	​
+Ai=ri−mean(rgroup)A_i = r_i - \text{mean}(r_{\text{group}})Ai​=ri​−mean(rgroup​)
 
-=softmax(r
-i
-	​
+**关键思想：**  
+👉 用“组内相对排序”代替 value
 
-)
+**优点：**
 
-即使 reward 差异大：
+- ✅ 不需要 value head
+    
+- ✅ 方差显著降低
+    
+- ✅ 易 scale（大 batch）
+    
 
-仍保留概率质量给其他路径
+**缺点：**
 
-不会完全抛弃次优 expert
+- ❌ 仍然是 policy gradient（有噪声）
+    
+- ❌ reward spike 仍敏感
+    
 
-3️⃣ Credit assignment 更合理
+👉 **结论：**
 
-MoE 的 credit assignment 难点：
+> 当前 LLM RL 的主流方法（DeepSeek/Qwen 类）
 
-是 expert 好？还是 router 选得好？
+---
 
-Policy gradient 是：
+## 5️⃣ DAPO（GRPO增强版）
 
-把 reward 全部给当前路径
+**核心：**
 
-GSPO 是：
+Ai=scale(ri−rˉ)A_i = \text{scale}(r_i - \bar r)Ai​=scale(ri​−rˉ)
 
-在多个 response 之间做 soft 排序
+**关键：**  
+👉 动态缩放 advantage
 
-credit 在样本之间分配
+**优点：**
 
-而不是全压单条路径
+- ✅ 抗 reward scale 波动
+    
+- ✅ 更稳定（长 CoT）
+    
 
-这对稀疏 MoE 至关重要。
+**缺点：**
 
-4️⃣ 数学角度：MoE 更接近分类优化，而不是 RL
+- 本质仍是 PG
+    
 
-MoE 本质是：
+👉 **结论：**
 
-conditional computation + sparse routing
+> GRPO → DAPO = 工业稳定版本
 
-它更像：
+---
 
-多专家分类器
+## 6️⃣ DrGRPO（Distributionally Robust）
 
-mixture 分类模型
+**核心：**
 
-GSPO：
+- 对 reward 分布做鲁棒优化（robust optimization）
+    
 
-等价于最大似然
+**优点：**
 
-属于监督式 KL 优化
+- ✅ 抗 outlier reward
+    
+- ✅ 更稳定
+    
 
-GRPO：
+**缺点：**
 
-属于 policy gradient
+- 复杂度更高
+    
 
-噪声更大
+👉 **结论：**
 
-MoE + GSPO = 两个“分布模型”匹配
-MoE + PG = 噪声强化路径更新
+> 适合 noisy reward / 自动评测场景
 
-五、从训练稳定性对比
-指标	GRPO	GSPO
-router collapse 风险	高	低
-expert 负载均衡	差	好
-reward spike 敏感	高	低
-大 batch 可扩展	中	高
-训练震荡	容易	少
-六、从 scaling 角度看
+---
 
-大模型 + MoE + 长 CoT 时：
+## 7️⃣ GSPO（🔥MoE/大模型趋势）
 
-reward variance 极大
+**核心：**
 
-路径长度不一致
+wi=softmax(ri)w_i = \text{softmax}(r_i)wi​=softmax(ri​) L=KL(π∣∣w)\mathcal{L} = KL(\pi || w)L=KL(π∣∣w)
 
-专家分工明显
+👉 **不再是 policy gradient！**
 
-GSPO：
+**优点：**
 
-天然支持 group N sample
+- ✅ 极低方差
+    
+- ✅ 分布级训练（dense gradient）
+    
+- ✅ MoE 友好（避免 collapse）
+    
+- ✅ scaling 极强
+    
 
-软分布监督
+**缺点：**
 
-梯度更 dense
+- ❌ exploration 较弱（偏 exploitation）
+    
 
-这就是为什么：
+👉 **结论：**
 
-大规模 MoE reasoning 模型，越来越偏向 GSPO 类方法
+> **下一代 RLHF（尤其 MoE）核心方法**
 
-七、一个直觉总结
+---
 
-MoE 是“稀疏网络”。
+## 8️⃣ ReMax（Reward Maximization）
 
-Policy Gradient 是“高方差信号”。
+**核心：**
 
-稀疏结构 + 高方差信号
-= 训练灾难。
+- 直接 maximize reward（类似 soft Q-learning）
+    
 
-GSPO 把高方差 reward
-变成平滑的 soft target distribution。
+**特点：**
 
-八、和你研究 VLA 的关联
+- 更偏“最大似然 + reward”
+    
 
-如果你未来做：
+**优点：**
 
-MoE-VLA
+- 稳定
+    
+- 训练简单
+    
 
-世界模型 + expert 模块
+**缺点：**
 
-skill expert decomposition
+- exploration 不强
+    
 
-那么：
+👉 **结论：**
 
-低层动作专家 → 适合 PG
+> GSPO 同类（distribution 方法）
 
-高层规划 MoE → 更适合 GSPO
+---
 
-九、一句话总结
+## 9️⃣ PRIME
 
-GSPO 之所以在 MoE 上更优，是因为它把“路径级强化”变成“分布级匹配”，大幅降低了稀疏专家结构下的梯度方差与路由崩溃风险。
+**核心：**
+
+- preference + reward + KL 混合优化
+    
+
+**优点：**
+
+- 结合 DPO + RL
+    
+- 更稳定
+    
+
+👉 **结论：**
+
+> **向“统一训练框架”演进**
+
+---
+
+## 🔟 KL_Cov / Clip_Cov（正则类）
+
+**核心：**
+
+- 控 KL / entropy
+    
+
+**作用：**
+
+- 防止：
+    
+    - 模型崩坏
+        
+    - 过拟合 reward
+        
+
+👉 **结论：**
+
+> 所有方法的“稳定器插件”
+
+
+| 简写              | 全称（英文）                                             | 一句话解释                            |
+| --------------- | -------------------------------------------------- | -------------------------------- |
+| **PPO**         | Proximal Policy Optimization                       | 带 clip + value 的经典策略梯度方法         |
+| **REINFORCE++** | Improved REINFORCE (Enhanced Policy Gradient)      | 改进版 REINFORCE（无 value 的 PG）      |
+| **RLOO**        | Reinforcement Learning with Leave-One-Out Baseline | 用组内 leave-one-out 做 baseline 降方差 |
+| **GRPO**        | Group Relative Policy Optimization                 | 用组内相对 reward 替代 value            |
+| **DAPO**        | Dynamic Advantage Policy Optimization              | 对 advantage 做动态缩放                |
+| **DrGRPO**      | Distributionally Robust GRPO                       | 对 reward 分布做鲁棒优化                 |
+| **GSPO**        | Group Soft Preference Optimization                 | 用 soft preference 做分布匹配（非PG）     |
+| **ReMax**       | Reward Maximization                                | 直接最大化 reward 的分布式方法              |
+| **PRIME**       | Preference Reward Integrated Model Optimization    | 融合 preference + reward 的统一优化框架   |
